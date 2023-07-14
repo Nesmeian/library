@@ -13,7 +13,8 @@ h1 {
   font-weight: 400;
   line-height: 50px;
   letter-spacing: 0.02em;
-  color: $color-primary;
+  color: $color-background;
+  margin: 0;
 }
 
 .link {
@@ -38,6 +39,11 @@ h1 {
   font-size: 40px;
   line-height: 50px;
   letter-spacing: 3px;
+}
+
+.welcome-text{
+  color:$color-background;
+  margin: 0;
 }
 
 .favourites__text {

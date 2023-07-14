@@ -169,6 +169,13 @@ select { /* 1 */
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
 /**
  * Remove the inner border and padding in Firefox.
  */
@@ -248,6 +255,11 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
@@ -294,118 +306,4 @@ template {
  */
 [hidden] {
   display: none;
-}
-
-body {
-  font-family: "Inter", Verdana, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  color: #000000;
-}
-
-h1 {
-  font-family: "Forum", Verdana, sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 50px;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  margin: 0;
-}
-
-.link {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.list {
-  list-style-type: none;
-}
-
-.title {
-  font-family: "Forum", Verdana, sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 2px;
-}
-
-.welcome {
-  font-family: "Forum", Verdana, sans-serif;
-  font-size: 40px;
-  line-height: 50px;
-  letter-spacing: 3px;
-}
-
-.welcome-text {
-  color: #ffffff;
-  margin: 0;
-}
-
-.favourites__text {
-  font-weight: 700;
-  line-height: 24px;
-}
-
-.staff-picks {
-  font-family: "Forum", Verdana, sans-serif;
-  line-height: 40px;
-  letter-spacing: 2px;
-}
-
-.favorites__item_title {
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.favorites__item_text {
-  font-size: 15px;
-}
-
-.coffee__container_title {
-  font-family: "Forum", Verdana, sans-serif;
-  font-size: 40px;
-  letter-spacing: 2px;
-  color: #bb945f;
-}
-
-.library__item_title-1 {
-  font-size: 30px;
-}
-
-.library__item_title-2 {
-  font-family: "Forum", Verdana, sans-serif;
-  font-size: 30px;
-}
-
-.wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.header {
-  padding: 20px, 0;
-}
-
-.header__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #0c0c0e;
-}
-
-.header__title {
-  padding: 0 402px 0 20px;
-}
-
-.logo {
-  padding-right: 20px;
-}
-
-.nav__list {
-  display: flex;
-}
-
-.nav__list_item {
-  padding: 0 30px 0 0;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=normalise.css.map */
