@@ -1,0 +1,76 @@
+//Here lie fonts,links,list
+
+body {
+  font-family: "Inter", Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: $color-border;
+}
+
+h1 {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  color: $color-primary;
+}
+
+.link {
+  text-decoration: none;
+  color: $color-background;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.welcome {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 3px;
+}
+
+.favourites__text {
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.staff-picks {
+  font-family: "Forum", Verdana, sans-serif;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.favorites__item_title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.favorites__item_text {
+  font-size: 15px;
+}
+
+.coffee__container_title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: $color-button-active;
+}
+
+.library__item_title-1 {
+  font-size: 30px;
+}
+.library__item_title-2 {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 30px;
+}
