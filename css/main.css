@@ -408,4 +408,24 @@ h1 {
 
 .nav__list_item {
   padding: 0 30px 0 0;
+}
+
+.wrapper__welcome {
+  display: flex;
+  margin-top: -1px;
+  background: url(/nesmeian-JSFEPRESCHOOL2023Q2/img/png/Welcome.png);
+  background-size: cover;
+  padding-right: 1px;
+}
+
+.welcome__container {
+  width: 600px;
+  height: 220px;
+  margin-top: 233px;
+  margin-bottom: 162px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c0c0e;
 }/*# sourceMappingURL=main.css.map */
