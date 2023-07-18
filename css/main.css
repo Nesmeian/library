@@ -383,6 +383,31 @@ h1 {
   margin: 0 auto;
 }
 
+.about__text {
+  text-align: center;
+}
+.about__text p {
+  margin: 50px 0 27px 0;
+}
+
+.about__loyalt3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about__img {
+  padding: 0 4px 0 20px;
+}
+
+.about__pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.favourites__text p {
+  margin: 44px 0 0 20px;
+}
+
 .header {
   padding: 20px, 0;
 }
@@ -428,4 +453,58 @@ h1 {
   align-items: center;
   justify-content: center;
   background-color: #0c0c0e;
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title::after {
+  content: "";
+  margin: 18px auto;
+  display: flex;
+  width: 50px;
+  height: 1px;
+  background-color: #0c0c0e;
+}
+
+.pagination__button {
+  width: 16px;
+  height: 16px;
+  margin: 40px 10px 40px 0;
+  background-color: #0c0c0e;
+  border-radius: 50px;
+}
+
+.pagination__button--active {
+  background-color: #bb945f;
+}
+
+.seasons__wrap {
+  display: inline;
+  position: relative;
+}
+
+.seasons__radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.favourites__checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: black;
+}
+
+.favourites__checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
 }/*# sourceMappingURL=main.css.map */
