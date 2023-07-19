@@ -6,6 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 60px;
 }
 
 .favourites__text {
@@ -29,7 +30,7 @@
 
 .favorites__item {
   position: relative;
-  height: 555px;
+  height: 552px;
   width: 529px;
   margin: 40px 0px 0 22px;
   padding-left: 17px;
@@ -73,7 +74,7 @@
 }
 
 .favorites__item_button {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   position: absolute;
   bottom: 3px;
 }

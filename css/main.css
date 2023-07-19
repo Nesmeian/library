@@ -385,6 +385,14 @@ h1 {
   color: #bb945f;
 }
 
+.coffee__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
 .library__item_title-1 {
   font-size: 30px;
 }
@@ -428,6 +436,40 @@ h1 {
   justify-content: center;
 }
 
+.coffee__loyalt2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.coffee__title {
+  margin-bottom: 41px;
+}
+
+.coffee__text {
+  padding: 0 20px;
+}
+.coffee__text p {
+  margin: 0;
+}
+
+.coffee__container_title-right {
+  text-align: end;
+}
+
+.coffee__container_item {
+  display: flex;
+  align-items: center;
+  padding: 0 0 59px 0;
+}
+
+.line {
+  width: 100px;
+  height: 1px;
+  margin: 0 60px;
+  background-color: #bb945f;
+}
+
 .inactive {
   display: none;
 }
@@ -436,6 +478,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 60px;
 }
 
 .favourites__text p {
@@ -457,7 +500,7 @@ h1 {
 
 .favorites__item {
   position: relative;
-  height: 555px;
+  height: 552px;
   width: 529px;
   margin: 40px 0px 0 22px;
   padding-left: 17px;
@@ -497,7 +540,7 @@ h1 {
 }
 
 .favorites__item_button {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   position: absolute;
   bottom: 3px;
 }
@@ -620,4 +663,5 @@ h1 {
   padding: 7px 26px;
   border-radius: 2px;
   border: 1px solid #0c0c0e;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
