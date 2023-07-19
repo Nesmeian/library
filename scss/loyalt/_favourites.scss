@@ -1,6 +1,79 @@
-.favourites__text{
-    p{
+.inactive {
+  display: none;
+}
 
-        margin:44px 0 0 20px;
-    }
+.favorites__loyalt4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.favourites__text {
+  p {
+    margin: 40px 0 0 20px;
+  }
+}
+
+.favourites__seasons_form {
+  margin-top: 32px;
+  padding-left: 20px;
+}
+
+.seasons__label {
+  margin-right: 78px;
+}
+
+.seasons__label::before {
+  margin-right: 21px;
+}
+
+.favorites__item {
+  position: relative;
+  height: 555px;
+  width: 529px;
+  margin: 40px 0px 0 22px;
+  padding-left: 17px;
+  border: 1px solid #0c0c0e;
+  &:nth-child(1n) {
+    margin-right: 60px;
+  }
+}
+
+.favorites__staff_picks {
+  margin: 13px 0 0 0;
+}
+
+.favorites__staff_picks::after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: $color-button-active;
+}
+
+.favorites__item_title {
+  h3 {
+    margin: 20px 0 0 0;
+  }
+  h4 {
+    margin: 0 0 19px 0;
+  }
+}
+
+.favorites__item_text {
+  p {
+    padding-right: 175px;
+  }
+}
+
+.favorites__item_img {
+  position: absolute;
+  right: -40px;
+  bottom: -5px;
+}
+
+.favorites__item_button {
+  margin-bottom: 15px;
+  position: absolute;
+  bottom: 3px;
 }

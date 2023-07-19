@@ -1,36 +1,55 @@
+.pagination__container {
+  padding: 0 5px 0 5px;
+}
+
 .pagination__button {
   width: 16px;
   height: 16px;
-  margin: 40px 10px 40px 0;
+  margin: 40px 5px 40px 0;
   background-color: $color-primary;
   border-radius: 50px;
 }
 .pagination__button--active {
   background-color: $color-button-active;
 }
-.seasons__wrap{
-    display: inline;
-    position: relative;
-}
+
 .seasons__radio {
   position: absolute;
+  z-index: -1;
   opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+}
+.seasons__radio + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
 }
 
-.favourites__checkmark {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: black;
+.seasons__label{
+    padding:5px;
 }
 
-.favourites__checkmark::after{
-    content: "";
-    position: absolute;
-    display: none;
-  }
+.seasons__radio + label::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-primary;
+
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.seasons__radio:checked + label::before {
+  border-color: $color-background;
+  border-color: $color-primary;
+  background-image: url(/nesmeian-JSFEPRESCHOOL2023Q2/img/svg/radio-checked.svg);
+}
+
+.button {
+  background-color: $color-background;
+  padding: 7px 26px;
+  border-radius: 2px;
+  border: 1px solid $color-primary;
+}

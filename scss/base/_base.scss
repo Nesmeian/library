@@ -41,8 +41,8 @@ h1 {
   letter-spacing: 3px;
 }
 
-.welcome-text{
-  color:$color-background;
+.welcome-text {
+  color: $color-background;
   margin: 0;
 }
 
@@ -51,7 +51,11 @@ h1 {
   line-height: 24px;
 }
 
-.staff-picks {
+.seasons__label--cheked {
+  font-weight: 700;
+  line-height: 24px;
+}
+.favorites__staff_picks {
   font-family: "Forum", Verdana, sans-serif;
   line-height: 40px;
   letter-spacing: 2px;
@@ -60,9 +64,20 @@ h1 {
 .favorites__item_title {
   font-size: 15px;
   font-weight: 700;
+  line-height: 40px;
+  h3 {
+    text-transform: uppercase;
+  }
+  h4 {
+    letter-spacing: 2px;
+  }
 }
 
 .favorites__item_text {
+  text-transform: capitalize;
+  font-size: 15px;
+  line-height: 40px;
+  letter-spacing: 2px;
   font-size: 15px;
 }
 
@@ -79,4 +94,12 @@ h1 {
 .library__item_title-2 {
   font-family: "Forum", Verdana, sans-serif;
   font-size: 30px;
+}
+
+.button {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-align: center;
 }
