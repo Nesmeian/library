@@ -321,16 +321,14 @@ h1 {
   letter-spacing: 2px;
 }
 
-.welcome {
-  font-family: "Forum", Verdana, sans-serif;
-  font-size: 40px;
-  line-height: 50px;
-  letter-spacing: 3px;
-}
-
 .welcome-text {
   color: #ffffff;
-  margin: 0;
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 3px;
+  text-align: center;
 }
 
 .favourites__text {
