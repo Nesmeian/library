@@ -1,0 +1,15 @@
+.title::after{
+    content: '';
+    margin: 18px auto;
+    display: flex;
+    width: 50px;
+    height: 1px;
+    background-color: $color-primary;
+}
+
+.footer__line{
+    margin: 0 20px 44px 20px;
+    width: 1400px;
+    height: 1px;
+    background-color: $color-background;
+}
