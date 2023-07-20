@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 60px;
+  margin-bottom: 57px;
 }
 
 .favourites__text {
@@ -16,12 +16,12 @@
 }
 
 .favourites__seasons_form {
-  margin-top: 32px;
+  margin-top: 38px;
   padding-left: 20px;
 }
 
 .seasons__label {
-  margin-right: 78px;
+  margin-right: 72px;
 }
 
 .seasons__label::before {
@@ -32,7 +32,7 @@
   position: relative;
   height: 552px;
   width: 529px;
-  margin: 40px 0px 0 22px;
+  margin: 34px 0px 6px 21px;
   padding-left: 17px;
   border: 1px solid #0c0c0e;
   &:nth-child(1n) {

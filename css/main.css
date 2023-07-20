@@ -313,15 +313,6 @@ h1 {
   margin: 0;
 }
 
-.link {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.list {
-  list-style-type: none;
-}
-
 .title {
   font-family: "Forum", Verdana, sans-serif;
   font-size: 40px;
@@ -393,13 +384,42 @@ h1 {
   text-align: center;
 }
 
-.library__item_title-1 {
+.coffee__container {
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.coffee__container_price {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.contacts__container-phone_info .library__item_title-1 {
   font-size: 30px;
 }
 
 .library__item_title-2 {
   font-family: "Forum", Verdana, sans-serif;
   font-size: 30px;
+}
+
+.contacts h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+.contacts p {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.contacts__mail_link {
+  font-weight: 700;
 }
 
 .button {
@@ -410,9 +430,29 @@ h1 {
   text-align: center;
 }
 
+.contacts__tel_link.link,
+.contacts__mail_link.link {
+  color: #000000;
+}
+
+.link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.list {
+  list-style-type: none;
+}
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.loyalt2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 .about__text {
@@ -436,12 +476,6 @@ h1 {
   justify-content: center;
 }
 
-.coffee__loyalt2 {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-
 .coffee__title {
   margin-bottom: 41px;
 }
@@ -453,21 +487,47 @@ h1 {
   margin: 0;
 }
 
-.coffee__container_title-right {
-  text-align: end;
+.coffee__container_wrapper {
+  display: flex;
 }
 
-.coffee__container_item {
-  display: flex;
-  align-items: center;
-  padding: 0 0 59px 0;
+.coffee__container_name div {
+  margin: 0 0 40px 0;
+}
+
+.coffee__container_line div:nth-child(1) {
+  margin-top: 20px;
+}
+.coffee__container_line div {
+  margin-bottom: 78px;
+}
+
+.coffee__container_price div {
+  margin-bottom: 40px;
+}
+
+.coffee__container_title-right {
+  text-align: end;
 }
 
 .line {
   width: 100px;
   height: 1px;
-  margin: 0 60px;
+  margin: 0 59px;
   background-color: #bb945f;
+}
+
+.contacts {
+  margin-bottom: 55px;
+}
+.contacts h4 {
+  margin: 0 0 50px 0;
+}
+.contacts h4.contacts__container_title-bottom {
+  margin: 48px 0 29px 0;
+}
+.contacts p {
+  margin-bottom: 36px;
 }
 
 .inactive {
@@ -478,7 +538,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 60px;
+  margin-bottom: 57px;
 }
 
 .favourites__text p {
@@ -486,12 +546,12 @@ h1 {
 }
 
 .favourites__seasons_form {
-  margin-top: 32px;
+  margin-top: 38px;
   padding-left: 20px;
 }
 
 .seasons__label {
-  margin-right: 78px;
+  margin-right: 72px;
 }
 
 .seasons__label::before {
@@ -502,7 +562,7 @@ h1 {
   position: relative;
   height: 552px;
   width: 529px;
-  margin: 40px 0px 0 22px;
+  margin: 34px 0px 6px 21px;
   padding-left: 17px;
   border: 1px solid #0c0c0e;
 }
@@ -606,6 +666,11 @@ h1 {
   background-color: #0c0c0e;
 }
 
+.contacts__title {
+  margin-top: 7px;
+  margin-bottom: 42px;
+}
+
 .pagination__container {
   padding: 0 5px 0 5px;
 }
@@ -664,4 +729,9 @@ h1 {
   border-radius: 2px;
   border: 1px solid #0c0c0e;
   cursor: pointer;
+}
+
+.library__form_input {
+  padding: 8 10 8 20;
+  border-radius: 10px;
 }/*# sourceMappingURL=main.css.map */
