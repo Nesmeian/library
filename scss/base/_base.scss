@@ -149,14 +149,11 @@ h1 {
   text-align: left;
 }
 
-.library__item_text{
- 
-font-size: 20px;
-font-weight: 400;
-line-height: 40px;
-letter-spacing: 0.02em;
-
-
+.library__item_text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.02em;
 }
 
 .library__form_input {
@@ -181,8 +178,28 @@ letter-spacing: 0.02em;
   letter-spacing: 1px;
 }
 
-.footer{
-  color:$color-background
+.footer {
+  color: $color-background;
+}
+
+.footer__item_text {
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+.footer__item_location {
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.footer__container{
+
+line-height: 20px;
+letter-spacing: 2px;
+
 }
 
 // link,list

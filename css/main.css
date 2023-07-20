@@ -478,6 +478,24 @@ h1 {
   color: #ffffff;
 }
 
+.footer__item_text {
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+.footer__item_location {
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.footer__container {
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
 .contacts__tel_link.link,
 .contacts__mail_link.link {
   color: #000000;
@@ -657,6 +675,38 @@ h1 {
   bottom: 3px;
 }
 
+.footer__item_location {
+  margin-top: 20px;
+}
+
+.footer__social-media_list {
+  display: flex;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.footer__list_item {
+  margin-right: 16px;
+}
+
+.footer__item_text {
+  margin: 20px 0 0 0;
+}
+
+.footer__item_text-bottom {
+  margin-top: 10px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer__container_item-center {
+  margin: 0 0px 47px 53px;
+}
+
 .header {
   padding: 20px, 0;
 }
@@ -750,6 +800,11 @@ h1 {
   margin-top: 20px;
 }
 
+.contacts__title {
+  margin-top: 7px;
+  margin-bottom: 42px;
+}
+
 .title::after {
   content: "";
   margin: 18px auto;
@@ -759,9 +814,11 @@ h1 {
   background-color: #0c0c0e;
 }
 
-.contacts__title {
-  margin-top: 7px;
-  margin-bottom: 42px;
+.footer__line {
+  margin: 0 20px 44px 20px;
+  width: 1400px;
+  height: 1px;
+  background-color: #ffffff;
 }
 
 .pagination__container {
