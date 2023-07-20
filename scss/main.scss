@@ -2,7 +2,6 @@
 @import "base/normalise";
 @import "base/base";
 
-
 //Loaylts
 @import "loyalt/wrapper";
 @import "loyalt/about";
@@ -15,6 +14,6 @@
 @import "loyalt/welcome";
 
 // components
-@import 'components/title';
-@import 'components/line';
-@import 'components/buttons';
+@import "components/title";
+@import "components/line";
+@import "components/buttons";
