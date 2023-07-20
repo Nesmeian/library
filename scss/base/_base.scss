@@ -105,7 +105,7 @@ h1 {
 .contacts__container-phone_info .library__item_title-1 {
   font-size: 30px;
 }
-.library__item_title-2 {
+.library__item_title_2 {
   font-family: "Forum", Verdana, sans-serif;
   font-size: 30px;
 }
@@ -122,9 +122,51 @@ h1 {
     letter-spacing: 2px;
   }
 }
-.contacts__mail_link{
+.contacts__mail_link {
   font-weight: 700;
 }
+
+.library__item_title_1 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+}
+
+.library__item_title_2 {
+  font-family: "Forum", Verdana, sans-serif;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0.02em;
+}
+
+.library__form_text {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.library__item_text{
+ 
+font-size: 20px;
+font-weight: 400;
+line-height: 40px;
+letter-spacing: 0.02em;
+
+
+}
+
+.library__form_input {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+}
+
 .button {
   font-size: 10px;
   font-weight: 700;
@@ -133,10 +175,20 @@ h1 {
   text-align: center;
 }
 
+.library__form_button {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.footer{
+  color:$color-background
+}
+
 // link,list
 .contacts__tel_link.link,
-.contacts__mail_link.link{
-  color:$color-border
+.contacts__mail_link.link {
+  color: $color-border;
 }
 .link {
   text-decoration: none;

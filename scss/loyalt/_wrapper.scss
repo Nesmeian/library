@@ -3,8 +3,11 @@
 .wrapper {
   max-width: $content-width;
   margin: 0 auto;
-}
  
+}
+.wrapper__footer{
+  background-color: $color-primary;
+}
 //loyalt
 .loyalt2 {
   display: flex;
