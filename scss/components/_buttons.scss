@@ -1,0 +1,74 @@
+.pagination__container {
+  padding: 0 5px 0 5px;
+}
+
+.pagination__button {
+  width: 16px;
+  height: 16px;
+  margin: 40px 5px 40px 0;
+  background-color: $color-primary;
+  border-radius: 50px;
+}
+.pagination__button--active {
+  background-color: $color-button-active;
+}
+
+.seasons__radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.seasons__radio + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.seasons__label {
+  padding: 5px;
+}
+
+.seasons__radio + label::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-primary;
+
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.seasons__radio:checked + label::before {
+  border-color: $color-background;
+  border-color: $color-primary;
+  background-image: url(/nesmeian-JSFEPRESCHOOL2023Q2/img/svg/radio-checked.svg);
+}
+
+.button {
+  background-color: $color-background;
+  padding: 7px 19px;
+  border-radius: 2px;
+  border: 1px solid $color-primary;
+  cursor: pointer;
+}
+
+.library__item_button-left {
+  margin-right: 14px;
+  padding: 7px 14px;
+}
+
+.library__form_input {
+  margin: 0 20px 24px 20px;
+  width: 500px;
+  padding: 10px 0px 7px 18px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.library__form_button {
+  margin: 20px 0px 8px 159px;
+  padding: 16px 38px 15px 39px;
+}

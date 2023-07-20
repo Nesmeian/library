@@ -1,7 +1,10 @@
 @import "abstract/constants";
+@import "base/normalise";
 @import "base/base";
+
+
+//Loaylts
 @import "loyalt/wrapper";
-@import "loyalt/flex";
 @import "loyalt/about";
 @import "loyalt/coffee";
 @import "loyalt/contacts";
@@ -10,3 +13,7 @@
 @import "loyalt/header";
 @import "loyalt/library";
 @import "loyalt/welcome";
+
+// components
+@import 'components/title';
+@import 'components/buttons';

@@ -1,0 +1,46 @@
+.coffee__title {
+  margin-bottom: 41px;
+}
+
+.coffee__text {
+  padding: 0 20px;
+  p {
+    margin: 0;
+  }
+}
+
+.coffee__container_wrapper {
+  display: flex;
+}
+
+.coffee__container_name {
+  div {
+    margin: 0 0 40px 0;
+  }
+}
+
+.coffee__container_line {
+  div:nth-child(1) {
+    margin-top: 20px;
+  }
+  div {
+    margin-bottom: 78px;
+  }
+}
+
+.coffee__container_price {
+  div {
+    margin-bottom: 40px;
+  }
+}
+
+.coffee__container_title-right {
+  text-align: end;
+}
+
+.line {
+  width: 100px;
+  height: 1px;
+  margin: 0 59px;
+  background-color: $color-button-active;
+}

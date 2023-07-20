@@ -1,0 +1,18 @@
+.title{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title::after{
+    content: '';
+    margin: 18px auto;
+    display: flex;
+    width: 50px;
+    height: 1px;
+    background-color: $color-primary;
+}
+
+.contacts__title{
+    margin-top: 7px;
+    margin-bottom: 42px;
+}

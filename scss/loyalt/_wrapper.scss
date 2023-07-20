@@ -1,5 +1,16 @@
+//wrapper, loyalt
+
 .wrapper {
   max-width: $content-width;
   margin: 0 auto;
-  padding:0 20px;
+ 
+}
+.wrapper__footer{
+  background-color: $color-primary;
+}
+//loyalt
+.loyalt2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
 }
