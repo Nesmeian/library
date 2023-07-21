@@ -904,8 +904,12 @@ button[disabled] {
 }
 
 .library__item_button-left {
-  margin-right: 14px;
+  margin-right: 4px;
   padding: 7px 14px;
+}
+
+.library__item_button-right {
+  padding: 10px 14px;
 }
 
 .library__form_input {
