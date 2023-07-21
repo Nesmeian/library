@@ -1,4 +1,8 @@
-//Here lie fonts,links,list,loyalt
+//Here lie scroll,fonts,list,loyalt
+
+html{
+  scroll-behavior: smooth;
+}
 
 //fonts
 body {
@@ -198,16 +202,7 @@ h1 {
   letter-spacing: 2px;
 }
 
-// link,list
-.contacts__tel_link.link,
-.contacts__mail_link.link {
-  color: $color-border;
-}
-.link {
-  text-decoration: none;
-  color: $color-background;
-}
-
+// list
 .list {
   list-style-type: none;
 }

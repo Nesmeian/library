@@ -1,0 +1,13 @@
+.contacts__tel_link.link,
+.contacts__mail_link.link {
+  color: $color-border;
+}
+.link {
+  text-decoration: none;
+  color: $color-background;
+  transition: all 0.5s;
+  &:hover{
+    text-decoration: underline;
+    color:$color-button-active
+  }
+}

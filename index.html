@@ -25,19 +25,19 @@
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__list_item">
-              <a href="#" class="nav__link link">About</a>
+              <a href="#welcome" class="nav__link link">About</a>
             </li>
             <li class="nav__list_item">
-              <a href="#" class="nav__link link">Favorites</a>
+              <a href="#favorites" class="nav__link link">Favorites</a>
             </li>
             <li class="nav__list_item">
-              <a href="#" class="nav__link link">Coffee shop</a>
+              <a href="#coffee" class="nav__link link">Coffee shop</a>
             </li>
             <li class="nav__list_item">
-              <a href="#" class="nav__link link">Contacts</a>
+              <a href="#contacts" class="nav__link link">Contacts</a>
             </li>
-            <li class="nav__list_item">
-              <a href="#" class="nav__link link">Library Card</a>
+            <li class="nav__list_item" >
+              <a href="#library" class="nav__link link">Library Card</a>
             </li>
           </ul>
         </nav>
@@ -52,19 +52,19 @@
     </header>
 
     <main class="main">
-      <section class="welcome">
+      <section class="welcome" id="welcome">
         <div class="wrapper__welcome wrapper">
           <div class="welcome__container">
-            <h2 class="welcome-text">
+            <h3 class="welcome-text">
               WELCOME<br />
               TO THE BROOKLYN <br />
               LIBRARY
-            </h2>
+            </h3>
           </div>
         </div>
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
         <div class="wrapper">
           <div class="about__container">
             <h2 class="about__title title">About</h2>
@@ -108,11 +108,11 @@
         </div>
       </section>
 
-      <section class="favourites">
+      <section class="favorites" id="favorites">
         <div class="wrapper">
-          <h2 class="favourites__title title">Favorites</h2>
-          <div class="favourites__text"><p>Pick favorites of season</p></div>
-          <form class="favourites__seasons_form">
+          <h2 class="favorites__title title">Favorites</h2>
+          <div class="favorites__text"><p>Pick favorites of season</p></div>
+          <form class="favorites__seasons_form">
             <input
               type="radio"
               id="winter"
@@ -240,7 +240,7 @@
                   thrived as the modern world has changed around them.
                 </p>
               </div>
-              <button class="favorites__item_button button">Buy</button>
+              <button disabled class="favorites__item_button favorites__item_button--own button">Own</button>
               <div class="favorites__item_img">
                 <img
                   src="/nesmeian-JSFEPRESCHOOL2023Q2/img/png/book4.png"
@@ -546,7 +546,7 @@
         </div>
       </section>
 
-      <section class="coffee">
+      <section class="coffee" id="coffee">
         <div class="wrapper coffee__wrapper">
           <h2 class="coffee__title title">Coffee Shop</h2>
           <div class="coffee__text">
@@ -623,7 +623,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="wrapper">
           <h2 class="contacts__title title">Our Contacts</h2>
           <div class="contacts__loyalt2_container loyalt2">
@@ -674,7 +674,7 @@
           </div>
         </div>
       </section>
-      <section class="library">
+      <section class="library" id="library">
         <div class="wrapper">
           <h2 class="library__title title">Digital Library Cards</h2>
           <div class="library__loyalt2 loyalt2">
@@ -724,7 +724,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="wrapper__footer">
+      <div class="wrapper__footer wrapper">
         <div class="footer__top">
           <div class="footer__loyalt2 loyalt2">
             <div class="footer__loyalt2_item">
@@ -794,7 +794,7 @@
           <span class="footer__container_item">2023</span>
           <span class="footer__container_item-center"
             ><a
-              href="https://rs.school/"
+              href="https://rs.school/js-stage0/"
               class="footer__item_link link"
               target="_blank"
               >The Rolling Scopes School</a
@@ -802,7 +802,7 @@
           >
           <span class="footer__container_item"
             ><a
-              href="https://github.com/Nesmeian/rsschool-cv"
+              href="https://github.com/Nesmeian"
               class="footer__item_link link"
               target="_blank"
               >Nesmeian</a
