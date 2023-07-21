@@ -335,7 +335,7 @@ h1 {
   text-align: center;
 }
 
-.favourites__text {
+.favorites__text {
   font-weight: 700;
   line-height: 24px;
 }
@@ -652,7 +652,7 @@ h1 {
 }
 
 .favorites__item_text p {
-  padding-right: 175px;
+  padding-right: 173px;
 }
 
 .favorites__item_img {
@@ -662,9 +662,8 @@ h1 {
 }
 
 .favorites__item_button {
-  margin-bottom: 12px;
   position: absolute;
-  bottom: 3px;
+  bottom: 11px;
 }
 
 .footer__item_location {
@@ -882,7 +881,7 @@ h1 {
 
 .button {
   background-color: #ffffff;
-  padding: 7px 19px;
+  padding: 8px 26px;
   border-radius: 2px;
   border: 1px solid #0c0c0e;
   cursor: pointer;
@@ -898,6 +897,10 @@ button[disabled] {
   color: #bb945f;
   border-color: #bb945f;
   cursor: auto;
+}
+
+.library__item_button-left {
+  padding: 7px 19px;
 }
 
 .library__item_button-left {
