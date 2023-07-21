@@ -6,8 +6,8 @@
   text-decoration: none;
   color: $color-background;
   transition: all 0.5s;
-  &:hover{
+  &:hover {
     text-decoration: underline;
-    color:$color-button-active
+    color: $color-button-active;
   }
 }
