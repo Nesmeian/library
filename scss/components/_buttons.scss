@@ -53,6 +53,17 @@
   border-radius: 2px;
   border: 1px solid $color-primary;
   cursor: pointer;
+  transition: all 0.5s;
+  &:not([disabled]):hover {
+    border: none;
+    background-color: $color-button-active;
+  }
+}
+button:disabled,
+button[disabled] {
+  color: $color-button-active;
+  border-color: $color-button-active;
+  cursor: auto;
 }
 
 .library__item_button-left {
