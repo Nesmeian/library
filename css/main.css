@@ -828,13 +828,14 @@ h1 {
 }
 
 .pagination__container {
-  padding: 0 5px 0 5px;
+  padding: 0 10px 0 10px;
+  cursor: pointer;
 }
 
 .pagination__button {
   width: 16px;
   height: 16px;
-  margin: 40px 5px 40px 0;
+  margin: 40px 0 40px 0;
   background-color: #0c0c0e;
   border-radius: 50px;
 }
@@ -912,7 +913,7 @@ button[disabled] {
   padding: 7px 18px;
 }
 
-.library__form_input {
+Q .library__form_input {
   margin: 0 20px 24px 20px;
   width: 500px;
   padding: 10px 0px 7px 18px;
