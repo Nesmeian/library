@@ -17,3 +17,12 @@
   justify-content: center;
   background-color: $color-primary;
 }
+
+@media (max-width: $tablet-width) {
+  .welcome__container {
+    margin-top: 240px;
+  }
+  .seasons__label_last {
+    margin: 0px;
+  }
+}

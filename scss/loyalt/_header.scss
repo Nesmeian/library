@@ -19,8 +19,15 @@
 
 .nav__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .nav__list_item {
   padding: 0 30px 0 0;
+}
+
+@media (max-width: $tablet-width) {
+  .nav {
+    display: none;
+  }
 }

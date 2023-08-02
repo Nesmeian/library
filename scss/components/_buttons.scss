@@ -77,7 +77,8 @@ button[disabled] {
 .library__item_button-right {
   padding: 7px 18px;
 }
-Q .library__form_input {
+
+.library__form_input {
   margin: 0 20px 24px 20px;
   width: 500px;
   padding: 10px 0px 7px 18px;
@@ -88,4 +89,10 @@ Q .library__form_input {
 .library__form_button {
   margin: 20px 0px 8px 159px;
   padding: 16px 38px 15px 39px;
+}
+
+@media (max-width: $tablet-width) {
+  .pagination__button {
+    margin-top: 25px;
+  }
 }
