@@ -26,13 +26,13 @@
   padding: 0 30px 0 0;
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $burger-width) {
   .logo {
     padding: 0;
   }
   .nav__list_item {
     padding: 0px 36px 30px 109px;
-    &:nth-child(:first) {
+    &:nth-child(1) {
       padding-top: 100px;
     }
   }

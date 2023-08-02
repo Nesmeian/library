@@ -124,6 +124,8 @@ button[disabled] {
   }
 
   .header__burger_meny.active {
+    position: fixed;
+    z-index: 11;
     .header__burger_line:nth-child(2) {
       opacity: 0;
     }

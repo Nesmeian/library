@@ -777,7 +777,7 @@ h1 {
   padding: 0 30px 0 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .logo {
     padding: 0;
   }
@@ -866,7 +866,7 @@ h1 {
 }
 .wrapper__welcome {
   display: flex;
-  margin-top: -1px;
+  margin-top: -2px;
   background: url(/nesmeian-JSFEPRESCHOOL2023Q2/img/png/Welcome.png);
   background-size: cover;
   padding-right: 1px;
@@ -1060,6 +1060,10 @@ button[disabled] {
     margin-bottom: 7px;
     background-color: #ffffff;
     transition: all 0.3s ease;
+  }
+  .header__burger_meny.active {
+    position: fixed;
+    z-index: 11;
   }
   .header__burger_meny.active .header__burger_line:nth-child(2) {
     opacity: 0;
