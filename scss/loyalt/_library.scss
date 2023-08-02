@@ -34,3 +34,21 @@
     margin-bottom: 36px;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .library__loyalt2 {
+    justify-content: center;
+  }
+  .library__item_title_2 {
+    margin-top: 26px;
+  }
+  .library__loyalt2_item {
+    align-items: center;
+  }
+  .library__item_text {
+    text-align: center;
+    p {
+      margin-bottom: 6px;
+    }
+  }
+}

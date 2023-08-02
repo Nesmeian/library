@@ -458,6 +458,7 @@ h1 {
   font-weight: 400;
   line-height: 40px;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .library__form_input {
@@ -822,6 +823,23 @@ h1 {
   margin-bottom: 36px;
 }
 
+@media (max-width: 768px) {
+  .library__loyalt2 {
+    justify-content: center;
+  }
+  .library__item_title_2 {
+    margin-top: 26px;
+  }
+  .library__loyalt2_item {
+    align-items: center;
+  }
+  .library__item_text {
+    text-align: center;
+  }
+  .library__item_text p {
+    margin-bottom: 6px;
+  }
+}
 .wrapper__welcome {
   display: flex;
   margin-top: -1px;
