@@ -27,7 +27,32 @@
 }
 
 @media (max-width: $tablet-width) {
-  .nav {
-    display: none;
+  .logo {
+    padding: 0;
+  }
+  .nav__list_item {
+    padding: 0px 36px 30px 109px;
+    &:nth-child(:first) {
+      padding-top: 100px;
+    }
+  }
+
+  .nav__list {
+    position: fixed;
+    width: 330px;
+    height: 570px;
+    right: -100%;
+    top: 0;
+    margin: 0;
+    flex-direction: column;
+    background-color: $color-primary;
+    transition: 1s;
+    z-index: 10;
+  }
+  .header__title {
+    padding: 0 282px 0 20px;
+  }
+  .active {
+    right: 0;
   }
 }
