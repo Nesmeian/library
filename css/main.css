@@ -922,6 +922,11 @@ h1 {
   border-radius: 50px;
 }
 
+.pagination__container5,
+.pagination__container4 {
+  display: none;
+}
+
 .pagination__button--active {
   background-color: #bb945f;
 }
@@ -1011,5 +1016,9 @@ button[disabled] {
 @media (max-width: 768px) {
   .pagination__button {
     margin-top: 25px;
+  }
+  .pagination__container5,
+  .pagination__container4 {
+    display: block;
   }
 }/*# sourceMappingURL=main.css.map */

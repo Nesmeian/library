@@ -10,6 +10,11 @@
   background-color: $color-primary;
   border-radius: 50px;
 }
+
+.pagination__container5,
+.pagination__container4 {
+  display: none;
+}
 .pagination__button--active {
   background-color: $color-button-active;
 }
@@ -94,5 +99,9 @@ button[disabled] {
 @media (max-width: $tablet-width) {
   .pagination__button {
     margin-top: 25px;
+  }
+  .pagination__container5,
+  .pagination__container4 {
+    display: block;
   }
 }
