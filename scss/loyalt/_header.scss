@@ -55,4 +55,9 @@
   .active {
     right: 0;
   }
+  .logo--active {
+    position: fixed;
+    z-index: 11;
+    right: 85px;
+  }
 }

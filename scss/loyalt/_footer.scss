@@ -26,3 +26,9 @@
 .footer__container_item-center {
   margin: 0 0px 47px 53px;
 }
+
+@media (max-width: $tablet-width) {
+  .footer__container_item-center {
+    margin: 0 0px 47px 0px;
+  }
+}
