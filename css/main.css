@@ -551,7 +551,16 @@ h1 {
   justify-content: center;
 }
 
+pagination__container4,
+.pagination__container5 {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  pagination__container4,
+  .pagination__container5 {
+    display: block;
+  }
   .about__text p {
     margin: 41px 0 20px 0;
     padding: 0 20px;
