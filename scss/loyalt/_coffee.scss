@@ -33,9 +33,14 @@
     margin-bottom: 40px;
   }
 }
-
-.coffee__container_title-right {
+.coffee__container_title,
+.coffee__container_name {
   text-align: end;
+}
+
+.coffee__container_title-left,
+.coffee__container_name-left {
+  text-align: start;
 }
 
 .line {
@@ -43,4 +48,16 @@
   height: 1px;
   margin: 0 59px;
   background-color: $color-button-active;
+}
+
+@media (max-width: $tablet-width) {
+  .coffee__text {
+    padding: 0 19px;
+  }
+  .coffee__container_right {
+    margin-left: auto;
+  }
+  .coffee__container_title-right {
+    margin: -10px 0 37px 0;
+  }
 }

@@ -77,3 +77,9 @@
   position: absolute;
   bottom: 11px;
 }
+
+@media (max-width: $tablet-width) {
+  .favorites__loyalt4 {
+    justify-content: center;
+  }
+}

@@ -1,7 +1,7 @@
 .wrapper__welcome {
   display: flex;
-  margin-top: -1px;
-  background: url(/nesmeian-JSFEPRESCHOOL2023Q2/img/png/Welcome.png);
+  margin-top: -2px;
+  background: url(/img/png/Welcome.png);
   background-size: cover;
   padding-right: 1px;
 }
@@ -16,4 +16,13 @@
   align-items: center;
   justify-content: center;
   background-color: $color-primary;
+}
+
+@media (max-width: $tablet-width) {
+  .welcome__container {
+    margin-top: 240px;
+  }
+  .seasons__label_last {
+    margin: 0px;
+  }
 }
