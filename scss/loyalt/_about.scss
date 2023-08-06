@@ -1,7 +1,8 @@
 .about__text {
   text-align: center;
   p {
-    margin: 50px 0 27px 0;
+    margin: 41px 0 20px 0;
+    padding: 0 20px;
   }
 }
 
@@ -17,4 +18,31 @@
 .about__pagination {
   display: flex;
   justify-content: center;
+}
+
+pagination__container4,
+.pagination__container5 {
+  display: none;
+}
+@media (max-width: $tablet-width) {
+  pagination__container4,
+  .pagination__container5 {
+    display: block;
+  }
+  .about__text {
+    p {
+      margin: 41px 0 20px 0;
+      padding: 0 20px;
+    }
+  }
+  .about__loyalt3_img {
+    justify-content: center;
+  }
+  .about__img {
+    padding: 0;
+  }
+  .about__img2,
+  .about__img3 {
+    display: none;
+  }
 }

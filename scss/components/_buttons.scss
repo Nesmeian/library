@@ -10,6 +10,11 @@
   background-color: $color-primary;
   border-radius: 50px;
 }
+
+.pagination__container5,
+.pagination__container4 {
+  display: none;
+}
 .pagination__button--active {
   background-color: $color-button-active;
 }
@@ -45,7 +50,7 @@
 .seasons__radio:checked + label::before {
   border-color: $color-background;
   border-color: $color-primary;
-  background-image: url(/nesmeian-JSFEPRESCHOOL2023Q2/img/svg/radio-checked.svg);
+  background-image: url(/img/svg/radio-checked.svg);
 }
 
 .button {
@@ -77,6 +82,7 @@ button[disabled] {
 .library__item_button-right {
   padding: 7px 18px;
 }
+
 .library__form_input {
   margin: 0 20px 24px 20px;
   width: 500px;
@@ -88,4 +94,46 @@ button[disabled] {
 .library__form_button {
   margin: 20px 0px 8px 159px;
   padding: 16px 38px 15px 39px;
+}
+
+.header__burger_meny {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .pagination__button {
+    margin-top: 25px;
+  }
+  .pagination__container5,
+  .pagination__container4 {
+    display: block;
+  }
+
+  .header__burger_meny {
+    display: block;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  .header__burger_line {
+    width: 45px;
+    height: 2px;
+    margin-bottom: 7px;
+    background-color: $color-background;
+    transition: all 0.3s ease;
+  }
+
+  .header__burger_meny.active {
+    position: fixed;
+    z-index: 11;
+    .header__burger_line:nth-child(2) {
+      opacity: 0;
+    }
+    .header__burger_line:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+    .header__burger_line:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
 }

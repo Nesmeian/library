@@ -10,3 +10,9 @@
     margin-bottom: 36px;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .contacts__img_map {
+    margin: 70px auto 0 auto;
+  }
+}
