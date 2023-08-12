@@ -567,9 +567,13 @@ pagination__container4,
   }
   .about__loyalt3_img {
     justify-content: center;
+    align-items: center;
+  }
+  .arroy {
+    margin-top: 44px;
   }
   .about__img {
-    padding: 0;
+    padding: 0 58px;
   }
   .about__img2,
   .about__img3 {
@@ -650,6 +654,9 @@ pagination__container4,
 @media (max-width: 768px) {
   .contacts__img_map {
     margin: 70px auto 0 auto;
+  }
+  .contacts__img_map_img {
+    width: 100%;
   }
 }
 .inactive {
@@ -798,7 +805,7 @@ pagination__container4,
 
 @media (max-width: 1024px) {
   .logo {
-    padding: 0;
+    padding: 0 21px 0 0px;
   }
   .nav__list_item {
     padding: 0px 36px 30px 109px;
@@ -827,7 +834,7 @@ pagination__container4,
   .logo--active {
     position: fixed;
     z-index: 11;
-    right: 85px;
+    right: 105px;
   }
 }
 .library {
@@ -884,13 +891,13 @@ pagination__container4,
     margin: 13px 0px 30px 0;
   }
   .library__item_title_2 {
-    margin-top: 26px;
+    margin-top: 21px;
   }
   .library__loyalt2_item {
     align-items: center;
   }
   .library__item_text p {
-    margin: 20px 0 41px 0;
+    margin: 25px 0 41px 0;
     text-align: center;
     padding: 0px;
   }
@@ -965,8 +972,12 @@ pagination__container4,
 }
 
 .pagination__container {
-  padding: 0 10px 0 10px;
+  padding: 0 5px 0 5px;
   cursor: pointer;
+}
+
+.arroy {
+  display: none;
 }
 
 .pagination__button {
@@ -1073,6 +1084,9 @@ button[disabled] {
 }
 
 @media (max-width: 768px) {
+  .arroy {
+    display: block;
+  }
   .pagination__button {
     margin-top: 25px;
   }
