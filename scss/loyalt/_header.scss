@@ -28,7 +28,7 @@
 
 @media (max-width: $burger-width) {
   .logo {
-    padding: 0;
+    padding: 0 21px 0 0px;
   }
   .nav__list_item {
     padding: 0px 36px 30px 109px;
@@ -58,6 +58,6 @@
   .logo--active {
     position: fixed;
     z-index: 11;
-    right: 85px;
+    right: 105px;
   }
 }
