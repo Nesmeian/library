@@ -781,6 +781,7 @@ pagination__container4,
 
 .header__wrapper {
   display: flex;
+  padding: 21px 0 0 0;
   align-items: center;
   justify-content: space-between;
   background-color: #0c0c0e;
