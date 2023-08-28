@@ -116,19 +116,19 @@ function CheckFunc() {
   }
 }
 
-//! Slaider Favorites
-// const seasonsRadio = document.querySelectorAll(".seasons__label");
-// const firstBook = document.querySelector(".favorites__first-book_section");
-// const secondBook = document.querySelector(".favorites__second-book_section");
-// const thirdBook = document.querySelector(".favorites__third-book_section");
-// const fouthBook = document.querySelector(".favorites__fouth-book_section");
-// let seasonsCount = 0;
+! Slaider Favorites
+const seasonsRadio = document.querySelectorAll(".seasons__label");
+const firstBook = document.querySelector(".favorites__first-book_section");
+const secondBook = document.querySelector(".favorites__second-book_section");
+const thirdBook = document.querySelector(".favorites__third-book_section");
+const fouthBook = document.querySelector(".favorites__fouth-book_section");
+let seasonsCount = 0;
 
-// seasonsRadio[1].addEventListener("click", () => {
-//   firstBook.classList.add("inactive");
-//   secondBook.classList.remove("inactive");
-// });
+seasonsRadio[1].addEventListener("click", () => {
+  firstBook.classList.add("inactive");
+  secondBook.classList.remove("inactive");
+});
 
-// function changeBooks() {
-//   for (let i = 0; i < seasonsRadio.length; i++) {}
-// }
+function changeBooks() {
+  for (let i = 0; i < seasonsRadio.length; i++) {}
+}
