@@ -5,29 +5,7 @@
   margin-bottom: 57px;
 }
 
-.favorites__first-book_section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  transition: all 1s;
-}
-
-.favorites__second-book_section {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  transition: all 1s;
-}
-
-.favorites__three-book_section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  transition: all 1s;
-}
-
-.favorites__four-book_section {
+.favorites__book_section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

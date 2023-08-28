@@ -116,7 +116,7 @@ function CheckFunc() {
   }
 }
 
-! Slaider Favorites
+// ! Slaider Favorites
 const seasonsRadio = document.querySelectorAll(".seasons__label");
 const firstBook = document.querySelector(".favorites__first-book_section");
 const secondBook = document.querySelector(".favorites__second-book_section");
@@ -130,5 +130,7 @@ seasonsRadio[1].addEventListener("click", () => {
 });
 
 function changeBooks() {
-  for (let i = 0; i < seasonsRadio.length; i++) {}
+  for (let i = 0; i < seasonsRadio.length; i++) {
+    seasonsRadio[i].addEventListener("click", () => {});
+  }
 }
