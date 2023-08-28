@@ -1,12 +1,37 @@
-.inactive {
-  display: none;
-}
-
 .favorites__loyalt4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 57px;
+}
+
+.favorites__first-book_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: all 1s;
+}
+
+.favorites__second-book_section {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: all 1s;
+}
+
+.favorites__three-book_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: all 1s;
+}
+
+.favorites__four-book_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: all 1s;
 }
 
 .favorites__text {
@@ -82,4 +107,9 @@
   .favorites__loyalt4 {
     justify-content: center;
   }
+}
+
+.inactive {
+  display: none;
+  transition: all 1s;
 }

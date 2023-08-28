@@ -542,8 +542,14 @@ h1 {
   flex-wrap: wrap;
 }
 
+.about_loyalt__container {
+  max-width: 1440px;
+  overflow: hidden;
+}
+
 .about__img {
   padding: 0 4px 0 20px;
+  transition: all 1s;
 }
 
 .about__pagination {
@@ -561,6 +567,10 @@ pagination__container4,
   .pagination__container5 {
     display: block;
   }
+  .about_loyalt__container {
+    max-width: 560px;
+    overflow: hidden;
+  }
   .about__text p {
     margin: 41px 0 20px 0;
     padding: 0 20px;
@@ -574,10 +584,6 @@ pagination__container4,
   }
   .about__img {
     padding: 0 58px;
-  }
-  .about__img2,
-  .about__img3 {
-    display: none;
   }
 }
 .coffee__title {
@@ -659,15 +665,40 @@ pagination__container4,
     width: 100%;
   }
 }
-.inactive {
-  display: none;
-}
-
 .favorites__loyalt4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 57px;
+}
+
+.favorites__first-book_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: all 1s;
+}
+
+.favorites__second-book_section {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: all 1s;
+}
+
+.favorites__three-book_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: all 1s;
+}
+
+.favorites__four-book_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: all 1s;
 }
 
 .favorites__text p {
@@ -738,6 +769,11 @@ pagination__container4,
     justify-content: center;
   }
 }
+.inactive {
+  display: none;
+  transition: all 1s;
+}
+
 .footer__item_location {
   margin-top: 20px;
 }
@@ -998,6 +1034,7 @@ pagination__container4,
 
 .pagination__button--active {
   background-color: #bb945f;
+  cursor: auto;
 }
 
 .seasons__radio {
@@ -1091,7 +1128,7 @@ button[disabled] {
     display: block;
   }
   .pagination__button {
-    margin-top: 25px;
+    margin-top: 20px;
   }
   .pagination__container5,
   .pagination__container4 {
@@ -1122,4 +1159,15 @@ button[disabled] {
   .header__burger_meny.active .header__burger_line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+}
+.karusel {
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  transition: all 1s;
+}
+
+.arroy {
+  background: white;
+  border: none;
 }/*# sourceMappingURL=main.css.map */

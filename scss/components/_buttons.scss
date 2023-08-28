@@ -21,6 +21,7 @@
 }
 .pagination__button--active {
   background-color: $color-button-active;
+  cursor: auto;
 }
 
 .seasons__radio {
@@ -109,7 +110,7 @@ button[disabled] {
     display: block;
   }
   .pagination__button {
-    margin-top: 25px;
+    margin-top: 20px;
   }
   .pagination__container5,
   .pagination__container4 {
