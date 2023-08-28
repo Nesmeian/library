@@ -665,6 +665,10 @@ pagination__container4,
     width: 100%;
   }
 }
+.favorites {
+  min-height: 1440px;
+}
+
 .favorites__loyalt4 {
   display: flex;
   flex-wrap: wrap;
@@ -673,6 +677,7 @@ pagination__container4,
 }
 
 .favorites__book_section {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -748,8 +753,13 @@ pagination__container4,
   }
 }
 .inactive {
-  display: none;
-  transition: all 1s;
+  visibility: hidden;
+  transition: all 0.5s;
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer__item_location {

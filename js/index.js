@@ -118,19 +118,16 @@ function CheckFunc() {
 
 // ! Slaider Favorites
 const seasonsRadio = document.querySelectorAll(".seasons__label");
-const firstBook = document.querySelector(".favorites__first-book_section");
-const secondBook = document.querySelector(".favorites__second-book_section");
-const thirdBook = document.querySelector(".favorites__third-book_section");
-const fouthBook = document.querySelector(".favorites__fouth-book_section");
-let seasonsCount = 0;
+const bookItem = document.querySelectorAll(".favorites__book_section");
+let favoritesCount = 0;
+seasonsRadio.forEach((e, i) => {
+  seasonsRadio[i].addEventListener("click", () => {
+    bookItem.forEach((elem) => {
+      elem.classList.add("inactive");
 
-seasonsRadio[1].addEventListener("click", () => {
-  firstBook.classList.add("inactive");
-  secondBook.classList.remove("inactive");
+      setTimeout(function () {
+        bookItem[i].classList.remove("inactive");
+      }, 500);
+    });
+  });
 });
-
-function changeBooks() {
-  for (let i = 0; i < seasonsRadio.length; i++) {
-    seasonsRadio[i].addEventListener("click", () => {});
-  }
-}
