@@ -829,9 +829,6 @@ pagination__container4,
 }
 
 @media (max-width: 1024px) {
-  .logo {
-    padding: 0 21px 0 0px;
-  }
   .nav__list_item {
     padding: 0 14px 57px 0px;
   }
@@ -857,10 +854,16 @@ pagination__container4,
   .active {
     right: 0;
   }
+  .logo {
+    position: absolute;
+    right: 85px;
+    padding: 0 21px 0 0px;
+    z-index: 11;
+  }
   .logo--active {
     position: fixed;
-    z-index: 11;
     right: 105px;
+    z-index: 11;
     padding: 0px;
   }
 }
@@ -996,6 +999,11 @@ pagination__container4,
   width: 95%;
   height: 1px;
   background-color: #ffffff;
+}
+
+.authorization__line {
+  margin: 0 0 0 20px;
+  width: 40px;
 }
 
 .pagination__container {
@@ -1158,4 +1166,38 @@ button[disabled] {
 .arroy {
   background: white;
   border: none;
+}
+
+.authorization__menu {
+  display: none;
+  position: fixed;
+  right: 10px;
+  top: 80px;
+  width: 80px;
+  font-size: 15px;
+  text-align: center;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .authorization__menu {
+    right: 80px;
+  }
+}
+
+.profile {
+  font-weight: 700;
+  padding: 5px;
+}
+
+.log-in {
+  padding: 15px 0 10px 0;
+}
+
+.register {
+  padding: 5px 0 20px 0;
+}
+
+.authorization__menu--active {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

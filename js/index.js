@@ -9,10 +9,13 @@ const nav = document.querySelector(".nav__list");
 const navActive = document.querySelector(".active");
 const logo = document.querySelector(".logo");
 const wrapper = document.querySelector(".wrapper");
-burger.addEventListener("click", (e) => {
+burger.addEventListener("click", () => {
   burger.classList.toggle("active");
   nav.classList.toggle("active");
   logo.classList.toggle("logo--active");
+  if (authMeny.classList.contains("authorization__menu--active")) {
+    authMeny.classList.remove("authorization__menu--active");
+  }
 });
 
 document.querySelectorAll(".nav__list").forEach((e) =>
@@ -27,6 +30,7 @@ document.addEventListener("click", (e) => {
   if (!wrapper.contains(e.target)) {
     nav.classList.remove("active");
     burger.classList.remove("active");
+    logo.classList.remove("logo--active");
   }
 });
 
@@ -127,7 +131,24 @@ seasonsRadio.forEach((e, i) => {
 
       setTimeout(function () {
         bookItem[i].classList.remove("inactive");
-      }, 500);
+      }, 700);
     });
   });
+});
+
+//!Authorization menu
+const authMeny = document.querySelector(".authorization__menu");
+
+logo.addEventListener("click", () => {
+  authMeny.classList.toggle("authorization__menu--active");
+  if (burger.classList.contains("active")) {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (!wrapper.contains(e.target)) {
+    authMeny.classList.remove("authorization__menu--active");
+  }
 });
