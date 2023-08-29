@@ -317,12 +317,37 @@ h1 {
   margin: 0;
 }
 
+.pop-up {
+  font-family: "Inter", Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.pop-up__text {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+}
+
 .title {
   font-family: "Forum", Verdana, sans-serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 40px;
   letter-spacing: 2px;
+}
+
+.pop-up__title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .welcome-text {
@@ -985,6 +1010,11 @@ pagination__container4,
   color: #bb945f;
 }
 
+.pop-up__link {
+  color: #000000;
+  text-decoration: underline;
+}
+
 .title::after {
   content: "";
   margin: 18px auto;
@@ -1040,6 +1070,7 @@ pagination__container4,
 }
 
 .seasons__radio + label {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   -webkit-user-select: none;
@@ -1080,6 +1111,22 @@ pagination__container4,
 .button:not([disabled]):hover {
   border: none;
   background-color: #bb945f;
+}
+
+.pop-up__input {
+  border: 1px solid #bb945f;
+  width: 200px;
+  padding: 0;
+  margin: 10px 30px 10px 0px;
+}
+
+.pop-up__button {
+  margin: 10px 0 0 0;
+  padding: 9px 16px;
+  background-color: #ffffff;
+  color: #0c0c0e;
+  border-radius: 2px;
+  border: 1px solid black;
 }
 
 button:disabled,
@@ -1200,4 +1247,11 @@ button[disabled] {
 
 .authorization__menu--active {
   display: block;
+}
+
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 250px;
 }/*# sourceMappingURL=main.css.map */

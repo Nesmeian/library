@@ -30,6 +30,7 @@
   opacity: 0;
 }
 .seasons__radio + label {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   user-select: none;
@@ -70,6 +71,22 @@
     background-color: $color-button-active;
   }
 }
+.pop-up__input {
+  border: 1px solid #bb945f;
+  width: 200px;
+  padding: 0;
+  margin: 10px 30px 10px 0px;
+}
+
+.pop-up__button {
+  margin: 10px 0 0 0;
+  padding: 9px 16px;
+  background-color: #ffffff;
+  color: #0c0c0e;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
 button:disabled,
 button[disabled] {
   color: $color-button-active;
