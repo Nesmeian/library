@@ -1036,6 +1036,26 @@ pagination__container4,
   width: 40px;
 }
 
+.pop-up__close_menu {
+  position: relative;
+  left: 216px;
+  top: 45px;
+}
+
+.close_menu__line {
+  width: 22px;
+  height: 3px;
+  background-color: #000000;
+}
+
+.close_menu__line:first-child {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.close_menu__line:last-child {
+  transform: translateY(-9px) rotate(45deg);
+}
+
 .pagination__container {
   padding: 0 5px 0 5px;
   cursor: pointer;
@@ -1254,4 +1274,8 @@ button[disabled] {
   flex-direction: column;
   margin: 0 auto;
   width: 250px;
+}
+
+.pop-up__form {
+  padding-left: 25px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,6 +1,10 @@
 .pop-up {
+  // display: none;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 250px;
+}
+.pop-up__form {
+  padding-left: 25px;
 }
