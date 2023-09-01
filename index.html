@@ -61,32 +61,77 @@
         </div>
       </div>
 
-      <!-- Pop-Up -->
-      <div class="pop-up__wrapper">
-        <div class="pop-up">
-          <div class="pop-up__close_menu">
-            <div class="close_menu__line"></div>
-            <div class="close_menu__line"></div>
+      <!-- Pop-Up  Register-->
+      <div class="pop-up__wrapper pop-up__wrapper_register">
+        <div class="pop-up pop-up__register">
+          <div class="pop-up__close_menu pop-up__close_register">
+            <div class="close_menu__line pop-up__close_menu_register"></div>
+            <div class="close_menu__line pop-up__close_menu_register"></div>
           </div>
-          <h2 class="pop-up__title">REGISTER</h2>
-          <form action="/#" class="pop-up__form">
+          <h2 class="pop-up__title pop-up__title_register">REGISTER</h2>
+          <form action="/#" class="pop-up__form pop-up__form_register">
             <label for="firstName"> First name </label>
-            <input type="text" class="first-name__input pop-up__input" />
+            <input
+              type="text"
+              class="first-name__input pop-up__input pop-up__first-name_register"
+            />
             <label for="lastName"> Last name </label>
-            <input type="text" class="last-name__input pop-up__input" />
+            <input
+              type="text"
+              class="last-name__input pop-up__input pop-up__last-name_register"
+            />
             <label for="mail"> E-mail </label>
-            <input type="email" id="mail" class="email_input pop-up__input" />
+            <input
+              type="email"
+              id="mail"
+              class="email_input pop-up__input pop-up__email_register"
+            />
             <label for="password"> Password </label>
             <input
               type="password"
-              class="password__input pop-up__input"
+              class="password__input pop-up__input pop-up__passwrod_register"
               minlength="8"
               id="password"
             />
-            <button class="pop-up__button button">Sing Up</button>
-            <p class="pop-up__text">
+            <button class="pop-up__button pop-up__button_register button">
+              Sing Up
+            </button>
+            <p class="pop-up__text pop-up__text_register">
               Already have an account?
               <a href="/#" class="pop-up__link link"> Login</a>
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Pop-Up log-in  -->
+      <div class="pop-up__wrapper pop-up__wrapper_log-in">
+        <div class="pop-up pop-up__log-in">
+          <div class="pop-up__close_menu pop-up__close_log-in">
+            <div class="close_menu__line pop-up__close_menu_log-in"></div>
+            <div class="close_menu__line pop-up__close_menu_log-in"></div>
+          </div>
+          <h2 class="pop-up__title pop-up__title_log-in">LOGIN</h2>
+          <form action="/#" class="pop-up__form pop-up__form_log-in">
+            <label for="log-email"> E-mail or readers card </label>
+            <input
+              type="email"
+              id="log-mail"
+              class="email_input pop-up__input pop-up__email_log-in"
+            />
+            <label for="log-password "> Password </label>
+            <input
+              type="password"
+              class="password__input pop-up__input pop-up__passwrod_log-in"
+              minlength="8"
+              id="log-password"
+            />
+            <button class="pop-up__button pop-up__button_log-in button">
+              Log In
+            </button>
+            <p class="pop-up__text pop-up__text_log-in">
+              Already have an account?
+              <a href="/#" class="pop-up__link link"> Register</a>
             </p>
           </form>
         </div>
@@ -429,7 +474,7 @@
               </div>
             </div>
             <!-- Third Book Section-->
-            <div class="favorites__second-book_section inactive">
+            <div class="favorites__book_section inactive">
               <div class="favorites__item">
                 <p class="favorites__staff_picks">Staff Picks</p>
                 <div class="favorites__item_title">
@@ -529,7 +574,7 @@
                 </div>
               </div>
             </div>
-            <!-- Fourth book section -->
+            <!--! Fourth book section -->
             <div class="favorites__book_section inactive">
               <div class="favorites__item">
                 <p class="favorites__staff_picks">Staff Picks</p>
@@ -800,12 +845,8 @@
                 </p>
               </div>
               <div>
-                <button class="library__item_button-left button">
-                  Sign Up
-                </button>
-                <button class="library__item_button-right button">
-                  Log in
-                </button>
+                <button class="library__item_sign button">Sign Up</button>
+                <button class="library__item_log-in button">Log in</button>
               </div>
             </div>
           </div>

@@ -160,21 +160,47 @@ document.querySelectorAll(".authorization__menu").forEach((e) => {
 });
 
 //! POP-UP Registration
-const popUp = document.querySelector(".pop-up");
-const authRegistr = document.querySelector(".register");
+const popUpReg = document.querySelector(".pop-up__register");
+const authRegstr = document.querySelector(".register");
 const closeRegPop = document.querySelector(".pop-up__close_menu");
-const popWrapp = document.querySelector(".pop-up__wrapper");
-const bthSingUp = document.querySelector(".library__item_button-left");
+const popWrappReg = document.querySelector(".pop-up__wrapper_register");
+const btnSign = document.querySelector(".library__item_sign");
 
 function popUpInitiate() {
-  popUp.classList.add("pop-up--active");
-  popWrapp.classList.add("pop-up__wrapper--active");
+  popUpReg.classList.add("pop-up--active");
+  popWrappReg.classList.add("pop-up__wrapper--active");
 }
 
 function popUpClose() {
-  popUp.classList.remove("pop-up--active");
-  popWrapp.classList.add("pop-up__wrapper--active");
+  popUpReg.classList.remove("pop-up--active");
+  popWrappReg.classList.remove("pop-up__wrapper--active");
 }
-bthSingUp.addEventListener("click", popUpInitiate);
+btnSign.addEventListener("click", popUpInitiate);
 closeRegPop.addEventListener("click", popUpClose);
-authRegistr.addEventListener("click", popUpInitiate);
+authRegstr.addEventListener("click", popUpInitiate);
+
+//!POP-UP Log-in
+const popUpLog = document.querySelector(".pop-up__log-in");
+const authLogIn = document.querySelector(".log-in");
+const popWrappLog = document.querySelector(".pop-up__wrapper_log-in");
+const btnLogIn = document.querySelector(".library__item_log-in");
+const closeLogIn = document.querySelector(".pop-up__close_log-in");
+
+console.log(popUpLog);
+console.log(authLogIn);
+console.log(popWrappLog);
+console.log(btnLogIn);
+
+function popUpLogInitiate() {
+  popUpLog.classList.add("pop-up--active");
+  popWrappLog.classList.add("pop-up__wrapper--active");
+}
+
+function popUpLogClose() {
+  popUpLog.classList.remove("pop-up--active");
+  popWrappLog.classList.remove("pop-up__wrapper--active");
+}
+
+btnLogIn.addEventListener("click", popUpLogInitiate);
+authLogIn.addEventListener("click", popUpLogInitiate);
+closeLogIn.addEventListener("click", popUpLogClose);

@@ -1267,11 +1267,21 @@ button[disabled] {
 }
 
 .log-in {
-  padding: 15px 0 10px 0;
+  height: 40px;
+  width: 80px;
+  vertical-align: initial;
+  text-align: center;
+  line-height: 3.5;
+  cursor: pointer;
 }
 
 .register {
-  padding: 5px 0 20px 0;
+  height: 46px;
+  width: 80px;
+  vertical-align: initial;
+  text-align: center;
+  line-height: 2.2;
+  cursor: pointer;
 }
 
 .authorization__menu--active {
