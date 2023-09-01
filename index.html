@@ -62,32 +62,34 @@
       </div>
 
       <!-- Pop-Up -->
-      <div class="pop-up">
-        <div class="pop-up__close_menu">
-          <div class="close_menu__line"></div>
-          <div class="close_menu__line"></div>
+      <div class="pop-up__wrapper">
+        <div class="pop-up">
+          <div class="pop-up__close_menu">
+            <div class="close_menu__line"></div>
+            <div class="close_menu__line"></div>
+          </div>
+          <h2 class="pop-up__title">REGISTER</h2>
+          <form action="/#" class="pop-up__form">
+            <label for="firstName"> First name </label>
+            <input type="text" class="first-name__input pop-up__input" />
+            <label for="lastName"> Last name </label>
+            <input type="text" class="last-name__input pop-up__input" />
+            <label for="mail"> E-mail </label>
+            <input type="email" id="mail" class="email_input pop-up__input" />
+            <label for="password"> Password </label>
+            <input
+              type="password"
+              class="password__input pop-up__input"
+              minlength="8"
+              id="password"
+            />
+            <button class="pop-up__button button">Sing Up</button>
+            <p class="pop-up__text">
+              Already have an account?
+              <a href="/#" class="pop-up__link link"> Login</a>
+            </p>
+          </form>
         </div>
-        <h2 class="pop-up__title">REGISTER</h2>
-        <form action="/#" class="pop-up__form">
-          <label for="firstName"> First name </label>
-          <input type="text" class="first-name__input pop-up__input" />
-          <label for="lastName"> Last name </label>
-          <input type="text" class="last-name__input pop-up__input" />
-          <label for="mail"> E-mail </label>
-          <input type="email" id="mail" class="email_input pop-up__input" />
-          <label for="password"> Password </label>
-          <input
-            type="password"
-            class="password__input pop-up__input"
-            minlength="8"
-            id="password"
-          />
-          <button class="pop-up__button button">Sing Up</button>
-          <p class="pop-up__text">
-            Already have an account?
-            <a href="/#" class="pop-up__link link"> Login</a>
-          </p>
-        </form>
       </div>
     </header>
 

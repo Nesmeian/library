@@ -152,3 +152,29 @@ document.addEventListener("click", (e) => {
     authMeny.classList.remove("authorization__menu--active");
   }
 });
+
+document.querySelectorAll(".authorization__menu").forEach((e) => {
+  e.addEventListener("click", () => {
+    authMeny.classList.remove("authorization__menu--active");
+  });
+});
+
+//! POP-UP Registration
+const popUp = document.querySelector(".pop-up");
+const authRegistr = document.querySelector(".register");
+const closeRegPop = document.querySelector(".pop-up__close_menu");
+const popWrapp = document.querySelector(".pop-up__wrapper");
+const bthSingUp = document.querySelector(".library__item_button-left");
+
+function popUpInitiate() {
+  popUp.classList.add("pop-up--active");
+  popWrapp.classList.add("pop-up__wrapper--active");
+}
+
+function popUpClose() {
+  popUp.classList.remove("pop-up--active");
+  popWrapp.classList.add("pop-up__wrapper--active");
+}
+bthSingUp.addEventListener("click", popUpInitiate);
+closeRegPop.addEventListener("click", popUpClose);
+authRegistr.addEventListener("click", popUpInitiate);
