@@ -48,12 +48,23 @@
             class="logo__img"
           />
         </div>
-        <div class="authorization__menu">
+        <!--No Auth menu  -->
+        <div class="no-authorization__menu">
           <div class="profile">Profile</div>
           <div class="line authorization__line"></div>
           <div class="log-in">Log In</div>
           <div class="register">Register</div>
         </div>
+
+        <!--With Auth menu  -->
+        <div class="with-authorization__menu">
+          <div class="card">Profile</div>
+          <div class="line authorization__line"></div>
+          <div class="my-profile">My profile</div>
+          <div class="register-Out">Log Out</div>
+        </div>
+
+        <!--Burger  -->
         <div class="header__burger_meny">
           <div class="header__burger_line"></div>
           <div class="header__burger_line"></div>
@@ -65,38 +76,50 @@
       <div class="pop-up__wrapper pop-up__wrapper_register">
         <div class="pop-up pop-up__register">
           <div class="pop-up__close_menu pop-up__close_register">
-            <div class="close_menu__line pop-up__close_menu_register"></div>
-            <div class="close_menu__line pop-up__close_menu_register"></div>
+            <div class="close_menu__line"></div>
+            <div class="close_menu__line"></div>
           </div>
           <h2 class="pop-up__title pop-up__title_register">REGISTER</h2>
-          <form action="/#" class="pop-up__form pop-up__form_register">
-            <label for="firstName"> First name </label>
+          <form action="#" class="pop-up__form">
+            <label for="first-name"> First name </label>
             <input
               type="text"
-              class="first-name__input pop-up__input pop-up__first-name_register"
+              id="first-name"
+              class="first-name__input pop-up__input"
+              required
             />
-            <label for="lastName"> Last name </label>
+            <label for="last-name"> Last name </label>
             <input
               type="text"
-              class="last-name__input pop-up__input pop-up__last-name_register"
+              id="last-name"
+              class="last-name__input pop-up__input"
+              required
             />
-            <label for="mail"> E-mail </label>
+            <label for="mail-reg"> E-mail </label>
             <input
               type="email"
-              id="mail"
-              class="email_input pop-up__input pop-up__email_register"
+              id="mail-reg"
+              class="email__input pop-up__input"
+              required
             />
-            <label for="password"> Password </label>
+            <label for="password-reg"> Password </label>
             <input
               type="password"
-              class="password__input pop-up__input pop-up__passwrod_register"
+              class="password__input pop-up__input"
+              id="password-reg"
               minlength="8"
-              id="password"
+              required
+              maxlength="20"
             />
-            <button class="pop-up__button pop-up__button_register button">
-              Sing Up
-            </button>
-            <p class="pop-up__text pop-up__text_register">
+
+            <input
+              type="submit"
+              value="Sing Up"
+              class="pop-up__button"
+              id="reg-btn"
+              required
+            />
+            <p class="pop-up__text">
               Already have an account?
               <a href="/#" class="pop-up__link link"> Login</a>
             </p>
@@ -108,28 +131,26 @@
       <div class="pop-up__wrapper pop-up__wrapper_log-in">
         <div class="pop-up pop-up__log-in">
           <div class="pop-up__close_menu pop-up__close_log-in">
-            <div class="close_menu__line pop-up__close_menu_log-in"></div>
-            <div class="close_menu__line pop-up__close_menu_log-in"></div>
+            <div class="close_menu__line"></div>
+            <div class="close_menu__line"></div>
           </div>
-          <h2 class="pop-up__title pop-up__title_log-in">LOGIN</h2>
-          <form action="/#" class="pop-up__form pop-up__form_log-in">
+          <h2 class="pop-up__title">LOGIN</h2>
+          <form action="/#" class="pop-up__form">
             <label for="log-email"> E-mail or readers card </label>
             <input
               type="email"
               id="log-mail"
-              class="email_input pop-up__input pop-up__email_log-in"
+              class="email_input pop-up__input"
             />
             <label for="log-password "> Password </label>
             <input
               type="password"
-              class="password__input pop-up__input pop-up__passwrod_log-in"
+              class="password__input pop-up__input"
               minlength="8"
               id="log-password"
             />
-            <button class="pop-up__button pop-up__button_log-in button">
-              Log In
-            </button>
-            <p class="pop-up__text pop-up__text_log-in">
+            <input type="submit" value="Log In" class="pop-up__button" />
+            <p class="pop-up__text">
               Already have an account?
               <a href="/#" class="pop-up__link link"> Register</a>
             </p>

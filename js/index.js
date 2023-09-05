@@ -136,26 +136,36 @@ seasonsRadio.forEach((e, i) => {
   });
 });
 
-//!Authorization menu
-const authMeny = document.querySelector(".authorization__menu");
-
-logo.addEventListener("click", () => {
-  authMeny.classList.toggle("authorization__menu--active");
+//!NoAuthorization menu
+const authNoMeny = document.querySelector(".no-authorization__menu");
+const authWithMeny = document.querySelector(".with-authorization__menu");
+function addNoAuthMeny() {
+  authNoMeny.classList.toggle("authorization__menu--active");
   if (burger.classList.contains("active")) {
     burger.classList.remove("active");
     nav.classList.remove("active");
   }
-});
+}
+
+function addWithAuthMenu() {
+  authWithMeny.classList.toggle("authorization__menu--active");
+  if (burger.classList.contains("active")) {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  }
+}
+
+logo.addEventListener("click", addNoAuthMeny);
 
 document.addEventListener("click", (e) => {
   if (!wrapper.contains(e.target)) {
-    authMeny.classList.remove("authorization__menu--active");
+    authNoMeny.classList.remove("authorization__menu--active");
   }
 });
 
 document.querySelectorAll(".authorization__menu").forEach((e) => {
   e.addEventListener("click", () => {
-    authMeny.classList.remove("authorization__menu--active");
+    authNoMeny.classList.remove("authorization__menu--active");
   });
 });
 
@@ -186,11 +196,6 @@ const popWrappLog = document.querySelector(".pop-up__wrapper_log-in");
 const btnLogIn = document.querySelector(".library__item_log-in");
 const closeLogIn = document.querySelector(".pop-up__close_log-in");
 
-console.log(popUpLog);
-console.log(authLogIn);
-console.log(popWrappLog);
-console.log(btnLogIn);
-
 function popUpLogInitiate() {
   popUpLog.classList.add("pop-up--active");
   popWrappLog.classList.add("pop-up__wrapper--active");
@@ -204,3 +209,92 @@ function popUpLogClose() {
 btnLogIn.addEventListener("click", popUpLogInitiate);
 authLogIn.addEventListener("click", popUpLogInitiate);
 closeLogIn.addEventListener("click", popUpLogClose);
+
+// ! Authorization
+
+const firstName = document.getElementById("first-name");
+const lastName = document.getElementById("last-name");
+const email = document.getElementById("mail-reg");
+const password = document.getElementById("password-reg");
+const regForm = document.querySelector(".pop-up__form");
+let usersArr = JSON.parse(window.localStorage.getItem("usersArray"));
+
+// console.log(usersArr);
+// class NewUsers {
+//   constructor(first, last, mail, pass) {
+//     this.first = first;
+//     this.last = last;
+//     this.mail = mail;
+//     this.pass = pass;
+//   }
+// }
+
+// Check usersArray
+if (!localStorage.hasOwnProperty("usersArray")) {
+  localStorage.setItem("usersArray", JSON.stringify([]));
+}
+if (!localStorage.hasOwnProperty("cardNumber")) {
+  localStorage.setItem("cardNumber", JSON.stringify([]));
+}
+
+if (!localStorage.hasOwnProperty("condition")) {
+  localStorage.setItem("condition", JSON.stringify(false));
+}
+
+let randomNum = JSON.parse(localStorage.getItem("randomNumber"));
+// let users = JSON.parse(localStorage.getItem("usersArray"));
+
+function checkLog(login, str) {
+  logo.innerHTML = login;
+  logo.classList.add("logo--auth");
+  logo.setAttribute("title", str);
+}
+function nameCapitalization(first, last) {
+  return first.slice(0, 1).toUpperCase() + last.slice(0, 1).toUpperCase();
+}
+
+function logoStr(first, last) {
+  return `${first} ${last}`;
+}
+
+function randomNumbers() {
+  let result = [];
+  let min = Math.ceil(0);
+  let max = Math.floor(10);
+  for (let i = 0; i < 9; i++) {
+    result.push(Math.floor(Math.random() * (max - min) + min));
+  }
+  return result.join("");
+}
+
+function registerNewUser() {
+  // usersArr.push(
+  //   new NewUsers(firstName.value, lastName.value, email.value, password.value)
+  // );
+
+  let logObj = {
+    login: true,
+    visits: 1,
+    first: firstName.value,
+    last: lastName.value,
+    email: email.value,
+    password: password.value,
+    cardNumber: randomNumbers(),
+  };
+  usersArr.push(logObj);
+  localStorage.setItem("usersArray", JSON.stringify(usersArr));
+  popUpClose();
+  location.reload();
+}
+regForm.addEventListener("submit", registerNewUser);
+
+// checkCondition
+usersArr.forEach((e) => {
+  if (e.login) {
+    let logoCap = nameCapitalization(e.first, e.last);
+    logoStr(e.first, e.last);
+    checkLog(logoCap, logoStr(e.first, e.last));
+    logo.removeEventListener("click", addNoAuthMeny);
+    logo.addEventListener("click", addWithAuthMenu);
+  }
+});
