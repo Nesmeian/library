@@ -902,8 +902,8 @@ pagination__container4,
   .logo {
     position: absolute;
     right: 85px;
-    padding: 0 21px 0 0px;
     z-index: 11;
+    margin-right: 21px;
   }
   .logo--active {
     position: fixed;
@@ -1030,7 +1030,8 @@ pagination__container4,
   color: #bb945f;
 }
 
-.pop-up__link {
+.pop-up-log__link,
+.pop-up-reg__link {
   color: #000000;
   text-decoration: underline;
 }
@@ -1304,11 +1305,34 @@ button[disabled] {
   cursor: pointer;
 }
 
-.myProfif .authorization__menu--active {
+.card-number {
+  font-weight: 700;
+  padding: 5px;
+}
+
+.my-profile {
+  height: 40px;
+  width: 80px;
+  vertical-align: initial;
+  text-align: center;
+  line-height: 3.5;
+  cursor: pointer;
+}
+
+.log-out {
+  height: 46px;
+  width: 80px;
+  vertical-align: initial;
+  text-align: center;
+  line-height: 2.2;
+  cursor: pointer;
+}
+
+.authorization__menu--active {
   right: 25px;
 }
 @media (max-width: 768px) {
-  .myProfif .authorization__menu--active {
+  .authorization__menu--active {
     right: 80px;
   }
 }
@@ -1326,7 +1350,8 @@ button[disabled] {
   bottom: auto;
 }
 
-.pop-up__form {
+.pop-up_reg-in_form,
+.pop-up_log-in_form {
   padding-left: 25px;
 }
 

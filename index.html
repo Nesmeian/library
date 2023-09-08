@@ -58,10 +58,10 @@
 
         <!--With Auth menu  -->
         <div class="with-authorization__menu">
-          <div class="card">Profile</div>
+          <div class="card-number">Profile</div>
           <div class="line authorization__line"></div>
           <div class="my-profile">My profile</div>
-          <div class="register-Out">Log Out</div>
+          <div class="log-out">Log out</div>
         </div>
 
         <!--Burger  -->
@@ -80,7 +80,10 @@
             <div class="close_menu__line"></div>
           </div>
           <h2 class="pop-up__title pop-up__title_register">REGISTER</h2>
-          <form action="#" class="pop-up__form">
+          <form
+            action="/nesmeian-JSFEPRESCHOOL2023Q2/index.html"
+            class="pop-up_reg-in_form"
+          >
             <label for="first-name"> First name </label>
             <input
               type="text"
@@ -117,11 +120,10 @@
               value="Sing Up"
               class="pop-up__button"
               id="reg-btn"
-              required
             />
             <p class="pop-up__text">
               Already have an account?
-              <a href="/#" class="pop-up__link link"> Login</a>
+              <span class="pop-up-reg__link link"> Login</span>
             </p>
           </form>
         </div>
@@ -135,7 +137,10 @@
             <div class="close_menu__line"></div>
           </div>
           <h2 class="pop-up__title">LOGIN</h2>
-          <form action="/#" class="pop-up__form">
+          <form
+            action="/nesmeian-JSFEPRESCHOOL2023Q2/index.html"
+            class="pop-up_log-in_form"
+          >
             <label for="log-email"> E-mail or readers card </label>
             <input
               type="email"
@@ -152,9 +157,41 @@
             <input type="submit" value="Log In" class="pop-up__button" />
             <p class="pop-up__text">
               Already have an account?
-              <a href="/#" class="pop-up__link link"> Register</a>
+              <span class="pop-up-log__link link"> Register</span>
             </p>
           </form>
+        </div>
+      </div>
+
+      <!--!Modal My profile  -->
+      <div class="modal-my-profile">
+        <div class="my-profile__container">
+          <div class="my-profile__left">
+            <div class="my-profile__logo">
+              <img src="" alt="" class="my-profile_logo__img" />
+              <p class="my-profile-logo__text"></p>
+            </div>
+          </div>
+          <div class="my-profile__right">
+            <div class="my_profile__title">MY PROFILE</div>
+            <div class="my-profile_personal-data">
+              <div class="visits">
+                <p class="visits__text">Visits</p>
+                <img src="" alt="" class="visits__img" />
+                <p class="visits__count"></p>
+              </div>
+              <div class="bonuses">
+                <p class="bonuses__text">Visits</p>
+                <img src="" alt="" class="bonuses__img" />
+                <p class="bonuses__count"></p>
+              </div>
+              <div class="books">
+                <p class="books__text">Visits</p>
+                <img src="" alt="" class="books__img" />
+                <p class="books__count"></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>

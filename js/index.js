@@ -13,8 +13,11 @@ burger.addEventListener("click", () => {
   burger.classList.toggle("active");
   nav.classList.toggle("active");
   logo.classList.toggle("logo--active");
-  if (authMeny.classList.contains("authorization__menu--active")) {
-    authMeny.classList.remove("authorization__menu--active");
+  if (authNoMeny.classList.contains("authorization__menu--active")) {
+    authNoMeny.classList.remove("authorization__menu--active");
+  }
+  if (authWithMeny.classList.contains("authorization__menu--active")) {
+    authWithMeny.classList.remove("authorization__menu--active");
   }
 });
 
@@ -138,7 +141,7 @@ seasonsRadio.forEach((e, i) => {
 
 //!NoAuthorization menu
 const authNoMeny = document.querySelector(".no-authorization__menu");
-const authWithMeny = document.querySelector(".with-authorization__menu");
+
 function addNoAuthMeny() {
   authNoMeny.classList.toggle("authorization__menu--active");
   if (burger.classList.contains("active")) {
@@ -147,7 +150,27 @@ function addNoAuthMeny() {
   }
 }
 
-function addWithAuthMenu() {
+document.addEventListener("click", (e) => {
+  if (!wrapper.contains(e.target)) {
+    authNoMeny.classList.remove("authorization__menu--active");
+  }
+});
+
+document.querySelectorAll(".no-authorization__menu").forEach((e) => {
+  e.addEventListener("click", () => {
+    authNoMeny.classList.remove("authorization__menu--active");
+  });
+});
+
+logo.addEventListener("click", addNoAuthMeny);
+
+//!With AuthMenu
+const authWithMeny = document.querySelector(".with-authorization__menu");
+const btnlogoOut = document.querySelector(".log-out");
+const myProfile = document.querySelector("my-profile");
+const passWord = document.querySelector(".card-number");
+
+function addWithAuthMeny() {
   authWithMeny.classList.toggle("authorization__menu--active");
   if (burger.classList.contains("active")) {
     burger.classList.remove("active");
@@ -155,15 +178,13 @@ function addWithAuthMenu() {
   }
 }
 
-logo.addEventListener("click", addNoAuthMeny);
-
 document.addEventListener("click", (e) => {
   if (!wrapper.contains(e.target)) {
-    authNoMeny.classList.remove("authorization__menu--active");
+    authWithMeny.classList.remove("authorization__menu--active");
   }
 });
 
-document.querySelectorAll(".authorization__menu").forEach((e) => {
+document.querySelectorAll(".with-authorization__menu").forEach((e) => {
   e.addEventListener("click", () => {
     authNoMeny.classList.remove("authorization__menu--active");
   });
@@ -175,19 +196,39 @@ const authRegstr = document.querySelector(".register");
 const closeRegPop = document.querySelector(".pop-up__close_menu");
 const popWrappReg = document.querySelector(".pop-up__wrapper_register");
 const btnSign = document.querySelector(".library__item_sign");
+const logInLink = document.querySelector(".pop-up-reg__link");
+const popUpAct = document.querySelector(".pop-up__wrapper--active");
+
+//! Not Working code (close outside click)
+// window.addEventListener("click", (e) => {
+//   if (!popUpReg.contains(e.target)) {
+//     popUpReg.classList.remove("pop-up--active");
+//     popWrappReg.classList.remove("pop-up__wrapper--active");
+//   }
+// });
 
 function popUpInitiate() {
   popUpReg.classList.add("pop-up--active");
   popWrappReg.classList.add("pop-up__wrapper--active");
 }
 
-function popUpClose() {
+function popUpRegClose() {
   popUpReg.classList.remove("pop-up--active");
   popWrappReg.classList.remove("pop-up__wrapper--active");
 }
+
 btnSign.addEventListener("click", popUpInitiate);
-closeRegPop.addEventListener("click", popUpClose);
+closeRegPop.addEventListener("click", popUpRegClose);
 authRegstr.addEventListener("click", popUpInitiate);
+
+function popUpSwithLogIn() {
+  popUpLog.classList.add("pop-up--active");
+  popWrappLog.classList.add("pop-up__wrapper--active");
+  popUpReg.classList.remove("pop-up--active");
+  popWrappReg.classList.remove("pop-up__wrapper--active");
+}
+
+logInLink.addEventListener("click", popUpSwithLogIn);
 
 //!POP-UP Log-in
 const popUpLog = document.querySelector(".pop-up__log-in");
@@ -195,6 +236,15 @@ const authLogIn = document.querySelector(".log-in");
 const popWrappLog = document.querySelector(".pop-up__wrapper_log-in");
 const btnLogIn = document.querySelector(".library__item_log-in");
 const closeLogIn = document.querySelector(".pop-up__close_log-in");
+const regInLink = document.querySelector(".pop-up-log__link");
+const btnsFavorites = document.querySelectorAll(".favorites__item_button");
+
+btnsFavorites.forEach((e) => {
+  e.addEventListener("click", () => {
+    popUpLog.classList.add("pop-up--active");
+    popWrappLog.classList.add("pop-up__wrapper--active");
+  });
+});
 
 function popUpLogInitiate() {
   popUpLog.classList.add("pop-up--active");
@@ -206,6 +256,14 @@ function popUpLogClose() {
   popWrappLog.classList.remove("pop-up__wrapper--active");
 }
 
+function popUpSwithRegIn() {
+  popUpLog.classList.remove("pop-up--active");
+  popWrappLog.classList.remove("pop-up__wrapper--active");
+  popUpReg.classList.add("pop-up--active");
+  popWrappReg.classList.add("pop-up__wrapper--active");
+}
+
+regInLink.addEventListener("click", popUpSwithRegIn);
 btnLogIn.addEventListener("click", popUpLogInitiate);
 authLogIn.addEventListener("click", popUpLogInitiate);
 closeLogIn.addEventListener("click", popUpLogClose);
@@ -216,18 +274,8 @@ const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 const email = document.getElementById("mail-reg");
 const password = document.getElementById("password-reg");
-const regForm = document.querySelector(".pop-up__form");
+const regForm = document.querySelector(".pop-up_reg-in_form");
 let usersArr = JSON.parse(window.localStorage.getItem("usersArray"));
-
-// console.log(usersArr);
-// class NewUsers {
-//   constructor(first, last, mail, pass) {
-//     this.first = first;
-//     this.last = last;
-//     this.mail = mail;
-//     this.pass = pass;
-//   }
-// }
 
 // Check usersArray
 if (!localStorage.hasOwnProperty("usersArray")) {
@@ -240,9 +288,6 @@ if (!localStorage.hasOwnProperty("cardNumber")) {
 if (!localStorage.hasOwnProperty("condition")) {
   localStorage.setItem("condition", JSON.stringify(false));
 }
-
-let randomNum = JSON.parse(localStorage.getItem("randomNumber"));
-// let users = JSON.parse(localStorage.getItem("usersArray"));
 
 function checkLog(login, str) {
   logo.innerHTML = login;
@@ -258,33 +303,27 @@ function logoStr(first, last) {
 }
 
 function randomNumbers() {
-  let result = [];
-  let min = Math.ceil(0);
-  let max = Math.floor(10);
-  for (let i = 0; i < 9; i++) {
-    result.push(Math.floor(Math.random() * (max - min) + min));
-  }
-  return result.join("");
+  const min = Math.pow(16, 8);
+  const max = Math.pow(16, 9) - 1;
+  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  const hexString = randomNumber.toString(16).padStart(9, "0").toUpperCase();
+  return hexString;
 }
 
 function registerNewUser() {
-  // usersArr.push(
-  //   new NewUsers(firstName.value, lastName.value, email.value, password.value)
-  // );
-
   let logObj = {
-    login: true,
-    visits: 1,
     first: firstName.value,
     last: lastName.value,
     email: email.value,
     password: password.value,
+    login: true,
+    visits: 1,
     cardNumber: randomNumbers(),
   };
   usersArr.push(logObj);
+  passWord.innerHTML = usersArr.cardNumber;
   localStorage.setItem("usersArray", JSON.stringify(usersArr));
-  popUpClose();
-  location.reload();
+  popUpRegClose();
 }
 regForm.addEventListener("submit", registerNewUser);
 
@@ -294,7 +333,29 @@ usersArr.forEach((e) => {
     let logoCap = nameCapitalization(e.first, e.last);
     logoStr(e.first, e.last);
     checkLog(logoCap, logoStr(e.first, e.last));
+    passWord.innerHTML = e.cardNumber;
     logo.removeEventListener("click", addNoAuthMeny);
-    logo.addEventListener("click", addWithAuthMenu);
+    logo.addEventListener("click", addWithAuthMeny);
   }
+});
+
+btnlogoOut.addEventListener("click", () => {
+  usersArr.forEach((e) => {
+    e.login = false;
+    localStorage.setItem("usersArray", JSON.stringify(usersArr));
+    location.reload();
+  });
+});
+
+//! Log In
+const logInForm = document.querySelector(".pop-up_log-in_form");
+const emailLogIn = document.getElementById("log-mail");
+const passLogIn = document.getElementById("log-password");
+logInForm.addEventListener("submit", () => {
+  usersArr.forEach((e) => {
+    if (e.password == passLogIn.value && e.email == emailLogIn.value) {
+      e.login = true;
+      localStorage.setItem("usersArray", JSON.stringify(usersArr));
+    }
+  });
 });
