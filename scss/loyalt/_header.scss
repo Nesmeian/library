@@ -15,7 +15,18 @@
 }
 
 .logo {
-  padding-right: 20px;
+  margin-right: 20px;
+}
+
+.logo--auth {
+  background: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 20px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 2;
+  color: #bb945f;
 }
 
 .nav__list {
@@ -28,9 +39,6 @@
 }
 
 @media (max-width: $burger-width) {
-  .logo {
-    padding: 0 21px 0 0px;
-  }
   .nav__list_item {
     padding: 0 14px 57px 0px;
     &:nth-child(1) {
@@ -57,10 +65,16 @@
   .active {
     right: 0;
   }
+  .logo {
+    position: absolute;
+    right: 85px;
+    z-index: 11;
+    margin-right: 21px;
+  }
   .logo--active {
     position: fixed;
-    z-index: 11;
     right: 105px;
+    z-index: 11;
     padding: 0px;
   }
 }

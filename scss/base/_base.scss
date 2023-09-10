@@ -21,12 +21,118 @@ h1 {
   color: $color-background;
   margin: 0;
 }
+.pop-up {
+  font-family: "Inter", Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+.pop-up__text {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+}
 
 .title {
   font-family: "Forum", Verdana, sans-serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.pop-up__title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.my_profile__title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.rented__books_item {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.my-profile__personal-data {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.my-profile_logo__img {
+  color: $color-button-active;
+  text-align: center;
+  line-height: 3.9;
+}
+
+.personal-data__item-count {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.rented__books_title {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.rented__books_list {
+  padding-left: 20px;
+}
+
+.my-profile__card-link {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.buy-card__title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: $color-background;
+}
+
+.buy-card__form {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.buy_book__cost {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.buy-card__text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
   letter-spacing: 2px;
 }
 

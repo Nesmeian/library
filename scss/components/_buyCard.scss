@@ -1,0 +1,76 @@
+.buy-card {
+  position: fixed;
+  width: 640px;
+  margin: 0 auto;
+  right: -100%;
+  transition: all 1s;
+}
+
+.buy-card__header {
+  background-color: $color-border;
+}
+
+.buy-card__title {
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.buy-card__container {
+  display: flex;
+  background-color: $color-background;
+}
+
+.buy-card__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 0 0 38px;
+}
+
+.big-input {
+  width: 194px;
+  margin-top: 10px;
+  margin-bottom: 7px;
+  border: 1px solid $color-button-active;
+}
+
+.small-input {
+  width: 39px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid $color-button-active;
+}
+
+.label__expiration {
+  margin-right: 60px;
+}
+
+.label__cvc {
+  margin-bottom: 10px;
+  margin-right: 125px;
+}
+
+.city__label {
+  margin-bottom: 14px;
+}
+
+.buy-book__container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 45px;
+}
+
+.buy_book__btn {
+  margin-right: 22px;
+}
+
+.buy-card__text {
+  padding: 30px 38px;
+}
+
+.buy-card--active {
+  top: 150px;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
