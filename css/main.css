@@ -1051,8 +1051,6 @@ pagination__container4,
 
 .library__item_text {
   text-align: end;
-}
-.library__item_text p {
   margin-bottom: 36px;
   padding-left: 90px;
 }
@@ -1319,11 +1317,17 @@ button[disabled] {
   padding: 10px 0px 7px 18px;
   border: 0;
   border-radius: 10px;
+  color: #bb945f;
 }
 
 .library__form_button {
+  width: 242px;
   margin: 20px 0px 8px 159px;
   padding: 16px 38px 15px 39px;
+}
+
+.library__button-wrapper {
+  background-color: #ffffff;
 }
 
 .header__burger_meny {
@@ -1543,6 +1547,12 @@ button[disabled] {
   justify-content: space-around;
 }
 
+.digital-beidje__personal-data {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
 .personal-data_item {
   display: flex;
   flex-direction: column;
@@ -1567,6 +1577,20 @@ button[disabled] {
   width: 20px;
   height: 20px;
   margin-bottom: 10px;
+}
+
+.personal-data__item-img-digit {
+  width: 20px;
+  height: 20px;
+}
+
+.personal-data_item-digit {
+  margin: 22px 26px 0 15px;
+  font-size: 10px;
+  display: flex;
+  font-size: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rented__books_item {
@@ -1598,6 +1622,10 @@ button[disabled] {
   border: none;
   color: #bb945f;
   font-size: 20px;
+}
+
+.digital-beidje__personal-data--active {
+  display: flex;
 }
 
 .buy-card {

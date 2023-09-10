@@ -55,6 +55,12 @@
   justify-content: space-around;
 }
 
+.digital-beidje__personal-data {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
 .personal-data_item {
   display: flex;
   flex-direction: column;
@@ -79,6 +85,20 @@
   width: 20px;
   height: 20px;
   margin-bottom: 10px;
+}
+
+.personal-data__item-img-digit {
+  width: 20px;
+  height: 20px;
+}
+
+.personal-data_item-digit {
+  margin: 22px 26px 0 15px;
+  font-size: 10px;
+  display: flex;
+  font-size: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rented__books_item {
@@ -107,4 +127,8 @@
   border: none;
   color: #bb945f;
   font-size: 20px;
+}
+
+.digital-beidje__personal-data--active {
+  display: flex;
 }

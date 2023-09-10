@@ -345,8 +345,8 @@ logInForm.addEventListener("submit", () => {
 const myProfileBtn = document.querySelector(".my-profile");
 const myProfileModal = document.querySelector(".my-profile__container");
 const myProfileCloseBtn = document.querySelector(".my-profile__close_btn");
-const visitsCount = document.querySelector(".visits__count");
-const booksCount = document.querySelector(".books__count");
+const visitsCount = document.querySelectorAll(".visits__count");
+const booksCount = document.querySelectorAll(".books__count");
 const myProfileCard = document.querySelector(".my-profile__card-link");
 const myProfileWrapper = document.querySelector(".modal-my-profile");
 const myProfileLogo = document.querySelector(".my-profile_logo__img");
@@ -442,8 +442,11 @@ usersArr.forEach((e) => {
     passWord.innerHTML = e.cardNumber;
     logo.removeEventListener("click", addNoAuthMeny);
     logo.addEventListener("click", addWithAuthMeny);
-    visitsCount.innerHTML = e.visits;
-    booksCount.innerHTML = e.countOfBooks;
+    visitsCount[0].innerHTML = e.visits;
+    visitsCount[1].innerHTML = e.visits;
+    booksCount[0].innerHTML = e.countOfBooks;
+    booksCount[1].innerHTML = e.countOfBooks;
+
     myProfileCard.value = e.cardNumber;
     myProfileLogo.innerHTML = logoCap;
     myProfileLogoText.innerHTML = logoStr(e.first, e.last);
@@ -551,5 +554,48 @@ usersArr.forEach((e) => {
         });
       });
     });
+  }
+});
+
+// ! Change Digital Library Card
+const libraryName = document.querySelector(".library__form_input-name");
+const libraryCard = document.querySelector(".library__form_input-card");
+const DigitalBeidj = document.querySelector(".digital-beidje__personal-data");
+const libraryBtn = document.querySelector(".library__form_button");
+const libraryTitle = document.querySelector(".library__item_title_2");
+const libraryText = document.querySelector(".library__item_text");
+const libraryBtnRemove = document.querySelector(".library__item_log-in");
+const libraryBtnProfile = document.querySelector(".library__item_sign");
+const libraryForm = document.querySelector(".library__container_form");
+
+libraryForm.addEventListener("submit", () => {
+  usersArr.forEach((e) => {
+    if (
+      libraryName.value == `${e.first} ${e.last}` &&
+      libraryCard.value == e.cardNumber
+    ) {
+      DigitalBeidj.classList.add("digital-beidje__personal-data--active");
+      libraryBtn.remove();
+      libraryBtnRemove.remove();
+      setTimeout(function () {
+        DigitalBeidj.classList.remove("digital-beidje__personal-data--active");
+        libraryBtn.add();
+        libraryBtnRemove.add();
+      }, 10000);
+    }
+    ``;
+  });
+});
+console.log(libraryForm);
+usersArr.forEach((e) => {
+  if (e.login) {
+    libraryName.value = `${e.first} ${e.last}`;
+    libraryCard.value = e.cardNumber;
+    DigitalBeidj.classList.add("digital-beidje__personal-data--active");
+    libraryBtn.remove();
+    libraryBtnRemove.remove();
+    libraryTitle.innerHTML = "Visit your profile";
+    libraryText.innerHTML = `With a digital library card you get free access to the Library’s wide array of digital resources including  e-books, databases, educational  resources, and more.`;
+    libraryBtnProfile.innerHTML = "Profile";
   }
 });

@@ -200,7 +200,7 @@
                   alt="book"
                   class="books__img personal-data__item-img"
                 />
-                <p class="books__count personal-data__item-count">1</p>
+                <p class="books__count personal-data__item-count">0</p>
               </div>
             </div>
             <div class="my-profile__rented_books">
@@ -1011,24 +1011,63 @@
             <div class="library__loyalt2_item">
               <h3 class="library__item_title_1">Find your Library card</h3>
               <div class="library__item_container">
-                <form action="/#" class="library__container_form">
-                  <label class="library__form_text">
+                <form action="#here" class="library__container_form">
+                  <label class="library__form_text" for="library-name">
                     Brooklyn Public Library</label
                   >
                   <input
                     type="text"
-                    class="library__form_input"
-                    placeholder="Reader's name "
+                    class="library__form_input library__form_input-name"
+                    placeholder="Reader's name"
+                    id="library-name"
+                    required
                   />
                   <input
-                    type="password"
-                    class="library__form_input"
+                    type="text"
+                    class="library__form_input library__form_input-card"
                     placeholder="Card number"
+                    required
                   />
+                  <div class="library__button-wrapper">
+                    <button class="library__form_button button" id="here">
+                      Check the card
+                    </button>
+                  </div>
                 </form>
-                <button class="library__form_button button">
-                  Check the card
-                </button>
+
+                <!--!Digital Beidje -->
+
+                <div class="digital-beidje__personal-data">
+                  <div class="visits personal-data_item-digit">
+                    <p class="visits__text personal-data__item-text">Visits</p>
+                    <img
+                      src="/nesmeian-JSFEPRESCHOOL2023Q2/img/svg/my-profile__logo.svg"
+                      alt="logo"
+                      class="visits__img personal-data__item-img-digit"
+                    />
+                    <p class="visits__count personal-data__item-count">1</p>
+                  </div>
+                  <div class="bonuses personal-data_item-digit">
+                    <p class="bonuses__text personal-data__item-text">
+                      Bonuses
+                    </p>
+                    <img
+                      src="/nesmeian-JSFEPRESCHOOL2023Q2/img/svg/Star.svg"
+                      alt="star"
+                      class="bonuses__img personal-data__item-img-digit"
+                    />
+                    <p class="bonuses__count personal-data__item-count">1</p>
+                  </div>
+                  <div class="books personal-data_item-digit">
+                    <p class="books__text personal-data__item-text">Books</p>
+                    <img
+                      src="/nesmeian-JSFEPRESCHOOL2023Q2/img/svg/book.svg"
+                      alt="book"
+                      class="books__img personal-data__item-img-digit"
+                    />
+                    <p class="books__count personal-data__item-count">0</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="library__loyalt2_item">

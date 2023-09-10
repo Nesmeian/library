@@ -31,10 +31,8 @@
 }
 .library__item_text {
   text-align: end;
-  p {
-    margin-bottom: 36px;
-    padding-left: 90px;
-  }
+  margin-bottom: 36px;
+  padding-left: 90px;
 }
 
 @media (max-width: $tablet-width) {

@@ -111,11 +111,17 @@ button[disabled] {
   padding: 10px 0px 7px 18px;
   border: 0;
   border-radius: 10px;
+  color: $color-button-active;
 }
 
 .library__form_button {
+  width: 242px;
   margin: 20px 0px 8px 159px;
   padding: 16px 38px 15px 39px;
+}
+
+.library__button-wrapper {
+  background-color: $color-background;
 }
 
 .header__burger_meny {
