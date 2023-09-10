@@ -11,8 +11,14 @@
   flex-wrap: wrap;
 }
 
+.about_loyalt__container {
+  max-width: 1440px;
+  overflow: hidden;
+}
+
 .about__img {
   padding: 0 4px 0 20px;
+  transition: all 1s;
 }
 
 .about__pagination {
@@ -29,6 +35,11 @@ pagination__container4,
   .pagination__container5 {
     display: block;
   }
+
+  .about_loyalt__container {
+    max-width: 560px;
+    overflow: hidden;
+  }
   .about__text {
     p {
       margin: 41px 0 20px 0;
@@ -44,9 +55,5 @@ pagination__container4,
   }
   .about__img {
     padding: 0 58px;
-  }
-  .about__img2,
-  .about__img3 {
-    display: none;
   }
 }

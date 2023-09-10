@@ -1,0 +1,134 @@
+.my-profile__container {
+  position: fixed;
+  margin: 0 auto;
+  right: -100%;
+  display: flex;
+  width: 600px;
+  background-color: $color-background;
+  transition: all 1s;
+}
+.my-profile__left {
+  width: 170px;
+  display: flex;
+  background-color: #000000;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.my-profile__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-profile-logo__img {
+  margin: 44px 0 18px 0;
+}
+
+.my-profile-logo__text {
+  background-color: $color-background;
+  text-align: center;
+  padding: 3px 15px;
+  margin: 0;
+}
+
+.my-profile_logo__img {
+  width: 80px;
+  height: 80px;
+  background-color: $color-background;
+  color: $color-button-active;
+  text-align: center;
+  line-height: 3.9;
+  margin: 0 0 18px 0;
+}
+
+.my-profile__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.my-profile__personal-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.digital-beidje__personal-data {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.personal-data_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.my_profile__title {
+  margin-top: 37px;
+  margin-bottom: 39px;
+}
+
+.personal-data__item-count {
+  margin: 0;
+}
+
+.personal-data__item-text {
+  margin: 0 0 10px 0;
+}
+
+.personal-data__item-img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.personal-data__item-img-digit {
+  width: 20px;
+  height: 20px;
+}
+
+.personal-data_item-digit {
+  margin: 22px 26px 0 15px;
+  font-size: 10px;
+  display: flex;
+  font-size: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rented__books_item {
+  margin-bottom: 12px;
+}
+.rented__books_list {
+  height: 55px;
+  width: 350px;
+  padding-left: 30px;
+  margin-top: 30px;
+  overflow: auto;
+}
+.card-number__text {
+  margin-bottom: 40px;
+}
+
+.my-profile--active {
+  right: 0;
+  left: 0;
+  top: 75px;
+  z-index: 5;
+}
+.my-profile__card-link {
+  outline: 0;
+  max-width: 140px;
+  border: none;
+  color: #bb945f;
+  font-size: 20px;
+}
+
+.digital-beidje__personal-data--active {
+  display: flex;
+}

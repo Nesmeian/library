@@ -21,6 +21,7 @@
 }
 .pagination__button--active {
   background-color: $color-button-active;
+  cursor: auto;
 }
 
 .seasons__radio {
@@ -29,6 +30,7 @@
   opacity: 0;
 }
 .seasons__radio + label {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   user-select: none;
@@ -69,6 +71,22 @@
     background-color: $color-button-active;
   }
 }
+.pop-up__input {
+  border: 1px solid #bb945f;
+  width: 200px;
+  padding: 0;
+  margin: 10px 30px 10px 0px;
+}
+
+.pop-up__button {
+  margin: 10px 0 0 0;
+  padding: 9px 16px;
+  background-color: #ffffff;
+  color: #0c0c0e;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
 button:disabled,
 button[disabled] {
   color: $color-button-active;
@@ -93,11 +111,17 @@ button[disabled] {
   padding: 10px 0px 7px 18px;
   border: 0;
   border-radius: 10px;
+  color: $color-button-active;
 }
 
 .library__form_button {
+  width: 242px;
   margin: 20px 0px 8px 159px;
   padding: 16px 38px 15px 39px;
+}
+
+.library__button-wrapper {
+  background-color: $color-background;
 }
 
 .header__burger_meny {
@@ -109,7 +133,7 @@ button[disabled] {
     display: block;
   }
   .pagination__button {
-    margin-top: 25px;
+    margin-top: 20px;
   }
   .pagination__container5,
   .pagination__container4 {

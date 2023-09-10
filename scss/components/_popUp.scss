@@ -1,0 +1,22 @@
+.pop-up {
+  position: fixed;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 250px;
+  background: $color-background;
+  right: -100%;
+  transition: all 1s;
+  display: flex;
+  top: 150px;
+  bottom: auto;
+}
+.pop-up_reg-in_form,
+.pop-up_log-in_form {
+  padding-left: 25px;
+}
+
+.pop-up--active {
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
