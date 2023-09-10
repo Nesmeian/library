@@ -170,14 +170,6 @@ const passWord = document.querySelector(".card-number");
 const myBuyedBooks = document.querySelector(".rented__books_list");
 const li = document.createElement("li");
 
-function addItemForBooks() {
-  li.classList.add("rented__books_item");
-  for (let i = 0; i < books.length; i++) {
-    console.log(i);
-    myBuyedBooks.appendChild(li).innerHTML = books[i];
-  }
-}
-
 function addWithAuthMeny() {
   authWithMeny.classList.toggle("authorization__menu--active");
   if (burger.classList.contains("active")) {
@@ -280,15 +272,12 @@ const email = document.getElementById("mail-reg");
 const password = document.getElementById("password-reg");
 const regForm = document.querySelector(".pop-up_reg-in_form");
 let usersArr = JSON.parse(window.localStorage.getItem("usersArray"));
-let books = JSON.parse(window.localStorage.getItem("booksArr"));
+
 // Check usersArray
 if (!localStorage.hasOwnProperty("usersArray")) {
   localStorage.setItem("usersArray", JSON.stringify([]));
 }
 
-if (!localStorage.hasOwnProperty("booksArr")) {
-  localStorage.setItem("booksArr", JSON.stringify([]));
-}
 function checkLog(login, str) {
   logo.innerHTML = login;
   logo.classList.add("logo--auth");
@@ -323,6 +312,7 @@ function registerNewUser() {
     cardNumber: randomNumbers(),
     subscription: false,
     books: [],
+    booksTitle: [],
   };
   usersArr.push(logObj);
   passWord.innerHTML = usersArr.cardNumber;
@@ -356,6 +346,7 @@ const myProfileBtn = document.querySelector(".my-profile");
 const myProfileModal = document.querySelector(".my-profile__container");
 const myProfileCloseBtn = document.querySelector(".my-profile__close_btn");
 const visitsCount = document.querySelector(".visits__count");
+const booksCount = document.querySelector(".books__count");
 const myProfileCard = document.querySelector(".my-profile__card-link");
 const myProfileWrapper = document.querySelector(".modal-my-profile");
 const myProfileLogo = document.querySelector(".my-profile_logo__img");
@@ -452,6 +443,7 @@ usersArr.forEach((e) => {
     logo.removeEventListener("click", addNoAuthMeny);
     logo.addEventListener("click", addWithAuthMeny);
     visitsCount.innerHTML = e.visits;
+    booksCount.innerHTML = e.countOfBooks;
     myProfileCard.value = e.cardNumber;
     myProfileLogo.innerHTML = logoCap;
     myProfileLogoText.innerHTML = logoStr(e.first, e.last);
@@ -513,9 +505,9 @@ usersArr.forEach((e) => {
   buyCardForm.addEventListener("submit", () => {
     e.subscription = true;
     localStorage.setItem("usersArray", JSON.stringify(usersArr));
-    console.log(1);
   });
 });
+
 //! change favorites buttnos after buying
 usersArr.forEach((e) => {
   if (e.subscription) {
@@ -527,11 +519,37 @@ usersArr.forEach((e) => {
         let lastTitle =
           elem.previousElementSibling.previousElementSibling.lastElementChild
             .innerHTML;
-        console.log(lastTitle);
-        books.push(`${firstTitle} ${lastTitle}`);
-        localStorage.setItem("booksArr", JSON.stringify(books));
+        e.booksTitle.push(`${firstTitle}`);
+        e.books.push(`${firstTitle} ${lastTitle}`);
+        localStorage.setItem("usersArray", JSON.stringify(usersArr));
+        e.countOfBooks++;
+        elem.disabled = true;
+        elem.innerHTML = "Own";
       });
     });
   }
 });
-addItemForBooks();
+
+//! addItemForBooks();
+usersArr.forEach((e) => {
+  if (e.login) {
+    e.books.forEach((el) => {
+      const rentedBook = document.createElement("li");
+      rentedBook.textContent = el;
+      li.classList.add("rented__books_item");
+      myBuyedBooks.classList.add("rented__books_list");
+      myBuyedBooks.insertBefore(rentedBook, myBuyedBooks.firstChild);
+      e.booksTitle.forEach((elem) => {
+        btnsFavorites.forEach((button) => {
+          const firstTitleValue = button
+            .closest(".favorites__item")
+            .querySelector(".favorite__item_title-first").textContent;
+          if (elem == firstTitleValue) {
+            button.disabled = true;
+            button.innerHTML = "Own";
+          }
+        });
+      });
+    });
+  }
+});

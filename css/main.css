@@ -1172,7 +1172,7 @@ pagination__container4,
 
 .my-profile__close_btn {
   position: relative;
-  left: 13px;
+  right: 13px;
   top: 33px;
 }
 
@@ -1574,9 +1574,10 @@ button[disabled] {
 }
 
 .rented__books_list {
-  width: 351;
-  height: 68;
+  height: 55px;
+  width: 350px;
   padding-left: 30px;
+  margin-top: 30px;
   overflow: auto;
 }
 
