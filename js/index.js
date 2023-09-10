@@ -75,7 +75,6 @@ function moveLeft() {
   CheckPaggination();
 }
 function moveRight() {
-  console.log(movePosition);
   position -= movePosition;
   sliderCount++;
   karuselTrack.style.transform = `translate(${position}px)`;
@@ -168,6 +167,16 @@ const authWithMeny = document.querySelector(".with-authorization__menu");
 const btnlogoOut = document.querySelector(".log-out");
 const myProfile = document.querySelector("my-profile");
 const passWord = document.querySelector(".card-number");
+const myBuyedBooks = document.querySelector(".rented__books_list");
+const li = document.createElement("li");
+
+function addItemForBooks() {
+  li.classList.add("rented__books_item");
+  for (let i = 0; i < books.length; i++) {
+    console.log(i);
+    myBuyedBooks.appendChild(li).innerHTML = books[i];
+  }
+}
 
 function addWithAuthMeny() {
   authWithMeny.classList.toggle("authorization__menu--active");
@@ -271,17 +280,21 @@ const email = document.getElementById("mail-reg");
 const password = document.getElementById("password-reg");
 const regForm = document.querySelector(".pop-up_reg-in_form");
 let usersArr = JSON.parse(window.localStorage.getItem("usersArray"));
-
+let books = JSON.parse(window.localStorage.getItem("booksArr"));
 // Check usersArray
 if (!localStorage.hasOwnProperty("usersArray")) {
   localStorage.setItem("usersArray", JSON.stringify([]));
 }
 
+if (!localStorage.hasOwnProperty("booksArr")) {
+  localStorage.setItem("booksArr", JSON.stringify([]));
+}
 function checkLog(login, str) {
   logo.innerHTML = login;
   logo.classList.add("logo--auth");
   logo.setAttribute("title", str);
 }
+
 function nameCapitalization(first, last) {
   return first.slice(0, 1).toUpperCase() + last.slice(0, 1).toUpperCase();
 }
@@ -308,6 +321,8 @@ function registerNewUser() {
     visits: 1,
     countOfBooks: 0,
     cardNumber: randomNumbers(),
+    subscription: false,
+    books: [],
   };
   usersArr.push(logObj);
   passWord.innerHTML = usersArr.cardNumber;
@@ -389,6 +404,11 @@ function removeBuyCard() {
   buyCardWrap.classList.remove("buy-card__wrapper--active");
 }
 
+function addBuyCard() {
+  buyCard.classList.add("buy-card--active");
+  buyCardWrap.classList.add("buy-card__wrapper--active");
+}
+
 // ! Outside click closer
 window.addEventListener("click", (e) => {
   if (
@@ -446,10 +466,12 @@ usersArr.forEach((e) => {
     });
 
     btnsFavorites.forEach((elem) => {
-      elem.addEventListener("click", () => {
-        buyCard.classList.add("buy-card--active");
-        buyCardWrap.classList.add("buy-card__wrapper--active");
-      });
+      elem.addEventListener("click", addBuyCard);
+      if (e.subscription == true) {
+        elem.removeEventListener("click", addBuyCard);
+      } else {
+        elem.addEventListener("click", addBuyCard);
+      }
     });
   }
 });
@@ -487,4 +509,29 @@ usersArr.forEach((e) => {
 });
 
 //! checking of all input in buy card is full
-localStorage.setItem("10", "20");
+usersArr.forEach((e) => {
+  buyCardForm.addEventListener("submit", () => {
+    e.subscription = true;
+    localStorage.setItem("usersArray", JSON.stringify(usersArr));
+    console.log(1);
+  });
+});
+//! change favorites buttnos after buying
+usersArr.forEach((e) => {
+  if (e.subscription) {
+    btnsFavorites.forEach((elem) => {
+      elem.addEventListener("click", () => {
+        let firstTitle =
+          elem.previousElementSibling.previousElementSibling.firstElementChild
+            .innerHTML;
+        let lastTitle =
+          elem.previousElementSibling.previousElementSibling.lastElementChild
+            .innerHTML;
+        console.log(lastTitle);
+        books.push(`${firstTitle} ${lastTitle}`);
+        localStorage.setItem("booksArr", JSON.stringify(books));
+      });
+    });
+  }
+});
+addItemForBooks();
