@@ -12,6 +12,11 @@
   }
 }
 
+.my-profile__card-link {
+  color: $color-button-active;
+  cursor: pointer;
+}
+
 .pop-up-log__link,
 .pop-up-reg__link {
   color: $color-border;

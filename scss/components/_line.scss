@@ -25,10 +25,26 @@
   top: 45px;
 }
 
+.my-profile__close_btn {
+  position: relative;
+  left: 13px;
+  top: 33px;
+}
+
+.buy-card__close-menu {
+  position: absolute;
+  top: 37px;
+  right: 15px;
+}
+
 .close_menu__line {
   width: 22px;
   height: 3px;
   background-color: $color-border;
+}
+
+.buy-card__close-line {
+  background-color: $color-background;
 }
 
 .close_menu__line:first-child {

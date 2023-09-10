@@ -168,28 +168,147 @@
         <div class="my-profile__container">
           <div class="my-profile__left">
             <div class="my-profile__logo">
-              <img src="" alt="" class="my-profile_logo__img" />
-              <p class="my-profile-logo__text"></p>
+              <div class="my-profile_logo__img">JK</div>
+              <p class="my-profile-logo__text">John Doe</p>
             </div>
           </div>
           <div class="my-profile__right">
-            <div class="my_profile__title">MY PROFILE</div>
-            <div class="my-profile_personal-data">
-              <div class="visits">
-                <p class="visits__text">Visits</p>
-                <img src="" alt="" class="visits__img" />
-                <p class="visits__count"></p>
+            <h2 class="my_profile__title">MY PROFILE</h2>
+            <div class="my-profile__personal-data">
+              <div class="visits personal-data_item">
+                <p class="visits__text personal-data__item-text">Visits</p>
+                <img
+                  src="/nesmeian-JSFEPRESCHOOL2023Q2/img/svg/my-profile__logo.svg"
+                  alt="logo"
+                  class="visits__img personal-data__item-img"
+                />
+                <p class="visits__count personal-data__item-count">1</p>
               </div>
-              <div class="bonuses">
-                <p class="bonuses__text">Visits</p>
-                <img src="" alt="" class="bonuses__img" />
-                <p class="bonuses__count"></p>
+              <div class="bonuses personal-data_item">
+                <p class="bonuses__text personal-data__item-text">Bonuses</p>
+                <img
+                  src="/nesmeian-JSFEPRESCHOOL2023Q2/img/svg/Star.svg"
+                  alt="star"
+                  class="bonuses__img personal-data__item-img"
+                />
+                <p class="bonuses__count personal-data__item-count">1</p>
               </div>
-              <div class="books">
-                <p class="books__text">Visits</p>
-                <img src="" alt="" class="books__img" />
-                <p class="books__count"></p>
+              <div class="books personal-data_item">
+                <p class="books__text personal-data__item-text">Books</p>
+                <img
+                  src="/nesmeian-JSFEPRESCHOOL2023Q2/img/svg/book.svg"
+                  alt="book"
+                  class="books__img personal-data__item-img"
+                />
+                <p class="books__count personal-data__item-count">1</p>
               </div>
+            </div>
+            <div class="my-profile__rented_books">
+              <h3 class="rented__books_title">Rented books</h3>
+              <ul class="rented__books_list">
+                <li class="rented__books_item">The Last Queen, Clive Irving</li>
+                <li class="rented__books_item">The Last Queen, Clive Irving</li>
+              </ul>
+            </div>
+            <div class="my-profile__card-number">
+              <p class="card-number__text">
+                Card number
+                <input
+                  type="text"
+                  class="my-profile__card-link link"
+                  readonly
+                />
+                <button class="copy-button">
+                  <img
+                    src="/nesmeian-JSFEPRESCHOOL2023Q2/img/svg/copyButton.svg"
+                    alt="copy"
+                  />
+                </button>
+              </p>
+            </div>
+          </div>
+          <div class="my-profile__close_btn">
+            <div class="close_menu__line"></div>
+            <div class="close_menu__line"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--!Buy a library card  -->
+      <div class="buy-card__wrapper">
+        <div class="buy-card">
+          <div class="buy-card__header">
+            <h2 class="buy-card__title">BUY A LIBRARY CARD</h2>
+            <div class="buy-card__close-menu">
+              <div class="close_menu__line buy-card__close-line"></div>
+              <div class="close_menu__line buy-card__close-line"></div>
+            </div>
+          </div>
+          <div class="buy-card__container">
+            <form class="buy-card__form">
+              <label for="bank"
+                >Bank card number
+                <input
+                  type="text"
+                  id="bank"
+                  class="big-input"
+                  required
+                  minlength="16"
+                  maxlength="16"
+                />
+              </label>
+              <label for="expiration" class="label__expiration"
+                >Expiration code
+                <input
+                  type="text"
+                  id="expirartion-part1"
+                  class="small-input"
+                  minlength="2"
+                  maxlength="2"
+                  required
+                />
+                <input
+                  type="text"
+                  id="expirartion-part2"
+                  class="small-input"
+                  minlength="2"
+                  maxlength="2"
+                  required
+                />
+              </label>
+              <label for="cvc" class="label__cvc">
+                CVC
+                <input
+                  type="text"
+                  id="cvc"
+                  class="small-input"
+                  required
+                  minlength="3"
+                  maxlength="3"
+                />
+              </label>
+              <label for="cardholder"
+                >Cardholder name
+                <input type="text" id="cardholder" class="big-input" required />
+              </label>
+              <label for="postal">
+                Postal code
+                <input type="text" id="postal" class="big-input" required />
+              </label>
+              <label for="city" class="city__label"
+                >City/Town
+                <input type="text" id="city" class="big-input" required />
+              </label>
+              <div class="buy-book__container">
+                <button class="buy_book__btn button">Buy</button>
+                <span class="buy_book__cost">$ 25.00</span>
+              </div>
+            </form>
+            <div class="buy-card__text">
+              If you are live, work, attend school, or pay property taxes in New
+              York State, you can get a $25 digital library card right now using
+              this online form. Visitors to New York State can also use this
+              form to apply for a temporary card.
             </div>
           </div>
         </div>

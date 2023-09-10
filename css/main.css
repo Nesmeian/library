@@ -350,6 +350,90 @@ h1 {
   text-align: center;
 }
 
+.my_profile__title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.rented__books_item {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.my-profile__personal-data {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.my-profile_logo__img {
+  color: #bb945f;
+  text-align: center;
+  line-height: 3.9;
+}
+
+.personal-data__item-count {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.rented__books_title {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.rented__books_list {
+  padding-left: 20px;
+}
+
+.my-profile__card-link {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.buy-card__title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.buy-card__form {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.buy_book__cost {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.buy-card__text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
 .welcome-text {
   color: #ffffff;
   font-family: "Forum", Verdana, sans-serif;
@@ -547,7 +631,25 @@ h1 {
   background-color: #0c0c0e;
 }
 
+.buy-card__wrapper--active {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
 .pop-up__wrapper--active {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.modal-my-profile--active {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -1030,6 +1132,11 @@ pagination__container4,
   color: #bb945f;
 }
 
+.my-profile__card-link {
+  color: #bb945f;
+  cursor: pointer;
+}
+
 .pop-up-log__link,
 .pop-up-reg__link {
   color: #000000;
@@ -1063,10 +1170,26 @@ pagination__container4,
   top: 45px;
 }
 
+.my-profile__close_btn {
+  position: relative;
+  left: 13px;
+  top: 33px;
+}
+
+.buy-card__close-menu {
+  position: absolute;
+  top: 37px;
+  right: 15px;
+}
+
 .close_menu__line {
   width: 22px;
   height: 3px;
   background-color: #000000;
+}
+
+.buy-card__close-line {
+  background-color: #ffffff;
 }
 
 .close_menu__line:first-child {
@@ -1308,6 +1431,7 @@ button[disabled] {
 .card-number {
   font-weight: 700;
   padding: 5px;
+  font-size: 12px;
 }
 
 .my-profile {
@@ -1358,5 +1482,193 @@ button[disabled] {
 .pop-up--active {
   left: 0;
   right: 0;
+  z-index: 10;
+}
+
+.my-profile__container {
+  position: fixed;
+  margin: 0 auto;
+  right: -100%;
+  display: flex;
+  width: 600px;
+  background-color: #ffffff;
+  transition: all 1s;
+}
+
+.my-profile__left {
+  width: 170px;
+  display: flex;
+  background-color: #000000;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.my-profile__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-profile-logo__img {
+  margin: 44px 0 18px 0;
+}
+
+.my-profile-logo__text {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 3px 15px;
+  margin: 0;
+}
+
+.my-profile_logo__img {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  color: #bb945f;
+  text-align: center;
+  line-height: 3.9;
+  margin: 0 0 18px 0;
+}
+
+.my-profile__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.my-profile__personal-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.personal-data_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.my_profile__title {
+  margin-top: 37px;
+  margin-bottom: 39px;
+}
+
+.personal-data__item-count {
+  margin: 0;
+}
+
+.personal-data__item-text {
+  margin: 0 0 10px 0;
+}
+
+.personal-data__item-img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.rented__books_item {
+  margin-bottom: 12px;
+}
+
+.rented__books_list {
+  padding-left: 30px;
+}
+
+.card-number__text {
+  margin-bottom: 40px;
+}
+
+.my-profile--active {
+  right: 0;
+  left: 0;
+  top: 75px;
+  z-index: 5;
+}
+
+.my-profile__card-link {
+  outline: 0;
+  max-width: 140px;
+  border: none;
+  color: #bb945f;
+  font-size: 20px;
+}
+
+.buy-card {
+  position: fixed;
+  width: 640px;
+  margin: 0 auto;
+  right: -100%;
+  transition: all 1s;
+}
+
+.buy-card__header {
+  background-color: #000000;
+}
+
+.buy-card__title {
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.buy-card__container {
+  display: flex;
+  background-color: #ffffff;
+}
+
+.buy-card__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 0 0 38px;
+}
+
+.big-input {
+  width: 194px;
+  margin-top: 10px;
+  margin-bottom: 7px;
+  border: 1px solid #bb945f;
+}
+
+.small-input {
+  width: 39px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #bb945f;
+}
+
+.label__expiration {
+  margin-right: 60px;
+}
+
+.label__cvc {
+  margin-bottom: 10px;
+  margin-right: 125px;
+}
+
+.city__label {
+  margin-bottom: 14px;
+}
+
+.buy-book__container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 45px;
+}
+
+.buy_book__btn {
+  margin-right: 22px;
+}
+
+.buy-card__text {
+  padding: 30px 38px;
+}
+
+.buy-card--active {
+  top: 150px;
+  right: 0;
+  left: 0;
   z-index: 10;
 }/*# sourceMappingURL=main.css.map */
