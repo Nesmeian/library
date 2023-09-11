@@ -1385,6 +1385,15 @@ button[disabled] {
   border: none;
 }
 
+.arroy:disabled,
+arroy[disabled] {
+  color: #bb945f;
+  border-color: #bb945f;
+  cursor: auto;
+  background: gray;
+  border-radius: 20px;
+}
+
 .no-authorization__menu {
   position: absolute;
   top: 80px;

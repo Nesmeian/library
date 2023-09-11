@@ -86,6 +86,14 @@ function CheckScreen() {
   }
 }
 
+let oldWidth = window.innerWidth;
+window.onresize = function () {
+  var newWidth = window.innerWidth;
+  if (newWidth != oldWidth) {
+    location.reload();
+    oldWidth = newWidth;
+  }
+};
 // Move
 
 arroyLeft.addEventListener("click", moveLeft);
@@ -94,17 +102,17 @@ function moveLeft() {
   position += movePosition;
   sliderCount--;
   karuselTrack.style.transform = `translate(${position}px)`;
-  CheckScreen();
   CheckFunc();
+  CheckScreen();
   CheckPaggination();
 }
 function moveRight() {
   position -= movePosition;
   sliderCount++;
   karuselTrack.style.transform = `translate(${position}px)`;
-  CheckScreen();
   CheckFunc();
   CheckPaggination();
+  CheckScreen();
 }
 
 // Pagination
@@ -123,26 +131,26 @@ for (let i = 0; i < paginationItem.length; i++) {
 
 // CheckPaggination
 function CheckPaggination() {
-  for (let i = 0; paginationItem.length; i++) {
+  paginationItem.forEach((e, i) => {
     if (sliderCount == i + 1) {
-      paginationItem[i].classList.add("pagination__button--active");
-    } else if (sliderCount != i + 1) {
-      paginationItem[i].classList.remove("pagination__button--active");
+      e.classList.add("pagination__button--active");
+    } else {
+      e.classList.remove("pagination__button--active");
     }
-  }
+  });
 }
 
 // CheckArroyFunc
 function CheckFunc() {
-  if (sliderCount == 1) {
-    arroyLeft.setAttribute("disabled", "");
+  if (sliderCount <= 1) {
+    arroyLeft.disabled = true;
   } else if (sliderCount > 1) {
-    arroyLeft.removeAttribute("disabled", "");
+    arroyLeft.disabled = false;
   }
-  if (sliderCount == 5) {
-    arroyRight.setAttribute("disabled", "");
+  if (sliderCount >= 5) {
+    arroyRight.disabled = true;
   } else if (sliderCount <= 4) {
-    arroyRight.removeAttribute("disabled", "");
+    arroyRight.disabled = false;
   }
 }
 
@@ -610,7 +618,7 @@ libraryForm.addEventListener("submit", () => {
     ``;
   });
 });
-console.log(libraryForm);
+
 usersArr.forEach((e) => {
   if (e.login) {
     libraryName.value = `${e.first} ${e.last}`;
