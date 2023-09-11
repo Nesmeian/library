@@ -1,27 +1,27 @@
 .no-authorization__menu {
-  position: fixed;
-  right: 10px;
+  position: absolute;
   top: 80px;
   width: 80px;
-  right: -100%;
+  transform: scaleX(0);
   font-size: 15px;
   text-align: center;
   background-color: $color-background;
-  box-sizing: border-box;
   transition: all 0.5s;
+  right: 20px;
+  top: 71px;
 }
 
 .with-authorization__menu {
-  position: fixed;
-  right: 10px;
+  position: absolute;
   top: 80px;
   width: 80px;
-  right: -100%;
+  transform: scaleX(0);
   font-size: 15px;
   text-align: center;
   background-color: $color-background;
-  box-sizing: border-box;
   transition: all 0.5s;
+  right: 20px;
+  top: 71px;
 }
 .profile {
   font-weight: 700;
@@ -69,8 +69,8 @@
 }
 
 .authorization__menu--active {
-  right: 25px;
+  transform: scaleX(1);
   @media (max-width: $tablet-width) {
-    right: 80px;
+    transform: scaleX(1);
   }
 }

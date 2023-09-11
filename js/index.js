@@ -361,6 +361,7 @@ logInForm.addEventListener("submit", () => {
     if (e.password == passLogIn.value && e.email == emailLogIn.value) {
       e.login = true;
       localStorage.setItem("usersArray", JSON.stringify(usersArr));
+      e.visits++;
     }
   });
 });
@@ -459,7 +460,6 @@ btnsFavorites.forEach((elem) => {
 
 usersArr.forEach((e) => {
   if (e.login) {
-    e.visits++;
     let logoCap = nameCapitalization(e.first, e.last);
     logoStr(e.first, e.last);
     checkLog(logoCap, logoStr(e.first, e.last));
@@ -548,10 +548,10 @@ usersArr.forEach((e) => {
             .innerHTML;
         e.booksTitle.push(`${firstTitle}`);
         e.books.push(`${firstTitle} ${lastTitle}`);
-        localStorage.setItem("usersArray", JSON.stringify(usersArr));
         e.countOfBooks++;
         elem.disabled = true;
         elem.innerHTML = "Own";
+        localStorage.setItem("usersArray", JSON.stringify(usersArr));
       });
     });
   }
