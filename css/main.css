@@ -1385,6 +1385,10 @@ button[disabled] {
   border: none;
 }
 
+.arroy-block {
+  background-color: block;
+}
+
 .no-authorization__menu {
   position: absolute;
   top: 80px;
