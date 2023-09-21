@@ -5,14 +5,14 @@
     background-color: aquamarine;
 }
 .audio-player{
-
     width: 400px;
-    height: 500px;
+
     margin:0 auto;
     background-color:cadetblue;
     border-radius: 20px;
     overflow: hidden;
 }
+
 
 .audio-player__image{
     width: 400%;
@@ -26,8 +26,10 @@
 }
 
 .audio-player__control-container{
+    margin-top: 15px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .audio_player__title{
@@ -72,4 +74,24 @@
     margin-top:5px ;
     border: 0px;
     border-radius: 50px;
+}
+
+.progress__bar{
+    width: 80%;
+    height: 3px;
+    background-color: black;
+    margin: 10px 44px 20px 44px;
+}
+.progress__bar--during{
+    width: 10%;
+    height: 2px;
+    background-color: aqua;
+    transition: all  linear;
+}
+.current-time{
+    width: 90%;
+    text-align: end;
+}
+.time-length{
+    margin-top: 4px;
 }
