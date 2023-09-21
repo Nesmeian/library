@@ -43,12 +43,12 @@
     width: 60px;
     height: 60px;
     margin-right: 20px;
-    background-image:url(/img/play.png) ;
+    background-image:url(/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/play.png) ;
     background-size: contain;
 }
 
 .stop{
-    background-image: url(/img/video-pause-button.svg);
+    background-image: url(/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/stop.svg);
 }
 
 .play{
