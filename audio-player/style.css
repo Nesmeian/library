@@ -130,6 +130,7 @@
     text-align: center;
     display: flex;
     justify-content: space-around;
+    padding-top: 15px;
 }
 .link{
     text-decoration: none;
