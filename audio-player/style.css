@@ -1,0 +1,143 @@
+
+
+.wrapper-img{
+    position: absolute;
+    max-width: 1024px;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url(/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/king_and_joker.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+.audio-player{
+    position: relative;
+    width: 400px;
+    margin:0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 5;
+}
+
+
+.audio-player__image{
+    width: 400%;
+    display: flex;
+    transition: all 1s;
+}
+
+.image{
+    width: 400px;
+    border-radius: 30px 30px 0px 0;
+}
+
+.audio-player__container{
+    margin-top: 450px;
+    box-shadow: 0 0 10px #000000;
+    padding-bottom:20px ;
+    border-radius: 30px;
+}
+
+.audio-player__control-container{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio_player__title{
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    color: darkblue;
+    font-size: 32px;
+}
+.button-play{
+    border: 0px;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background-image:url(/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/play.png) ;
+    background-size: contain;
+}
+
+.stop{
+    background-image: url(/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/stop.svg);
+}
+
+.play{
+    width: 40px;
+    height: 40px;
+}
+.control__buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.audio-player__control-wrapper{
+    background:linear-gradient(45deg, rgb(40, 40, 40), rgb(133, 133, 133));
+    border-radius: 30px;
+}
+
+.control__song-description{
+    margin-right: 20px;
+}
+.arrow{
+    width: 30px;
+    height: 30px;
+}
+.next,
+.prev{
+    margin-top:5px ;
+    border: 0px;
+    border-radius: 50px;
+}
+
+.progress__bar{
+    width: 80%;
+    height: 3px;
+    background-color: black;
+    margin: 10px 44px 20px 44px;
+    cursor: pointer;
+}
+.progress__bar--during{
+    width: 10%;
+    height: 2px;
+    background-color: aqua;
+    transition: all  linear;
+}
+.current-time{
+    width: 90%;
+    text-align: end;
+}
+.time-length{
+    margin-top: 4px;
+}
+
+.footer{
+    font-family: sans-serif;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.my-information{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s;
+}
+
+.link:hover{
+    color:gray ;
+    text-decoration: underline;
+}
