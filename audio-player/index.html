@@ -10,64 +10,67 @@
     />
   </head>
   <body>
+    <div class="wrapper-img"></div>
     <div class="wrapper">
       <div class="audio-player">
-        <div class="audio-player__container">
-          <div class="audio-player__image">
-            <img
-              src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/king_and_joker.jpg"
-              alt="korol"
-              class="image"
-            />
-            <img
-              src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/bulletProof.jpg"
-              alt="korol"
-              class="image"
-            />
-            <img
-              src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/Time_it's_differnt.jpg"
-              alt="korol"
-              class="image"
-            />
-          </div>
-          <div class="audio-player__control-container">
-            <div class="control__button-play">
-              <button class="button-play"></button>
+        <div class="audio-player__control-wrapper">
+          <div class="audio-player__container">
+            <div class="audio-player__image">
+              <img
+                src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/king_and_joker.jpg"
+                alt="korol"
+                class="image"
+              />
+              <img
+                src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/bulletProof.jpg"
+                alt="korol"
+                class="image"
+              />
+              <img
+                src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/Time_it's_differnt.jpg"
+                alt="korol"
+                class="image"
+              />
             </div>
-            <div class="control__song-description">
-              <h3 class="song__author">King and Joker</h3>
-              <p class="song__name">Man Was Eating Meat</p>
+            <div class="audio-player__control-container">
+              <div class="control__button-play">
+                <button class="button-play"></button>
+              </div>
+              <div class="control__song-description">
+                <h3 class="song__author">King and Joker</h3>
+                <p class="song__name">Man Was Eating Meat</p>
+              </div>
+              <div class="control__buttons">
+                <button class="prev">
+                  <img
+                    src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/prev.png"
+                    alt="arrow-prev"
+                    class="arrow arrow__prev"
+                  />
+                </button>
+                <button class="next">
+                  <img
+                    src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/next.png"
+                    alt="arrow-next"
+                    class="arrow arrow__next"
+                  />
+                </button>
+              </div>
             </div>
-            <div class="control__buttons">
-              <button class="prev">
-                <img
-                  src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/prev.png"
-                  alt="arrow-prev"
-                  class="arrow arrow__prev"
-                />
-              </button>
-              <button class="next">
-                <img
-                  src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/next.png"
-                  alt="arrow-next"
-                  class="arrow arrow__next"
-                />
-              </button>
+            <audio
+              src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/audio/Король и Шут - Ели Мясо Мужики.mp3"
+            ></audio>
+            <audio
+              src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/audio/Godsmack - Bulletproof.mp3"
+            ></audio>
+            <audio
+              src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/audio/Evans Blue - This Time It's Different.mp3"
+            ></audio>
+            <div class="current-time"></div>
+            <div class="progress__bar">
+              <div class="progress__bar--during"></div>
+              <div class="time-length"></div>
             </div>
-          </div>
-          <audio
-            src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/audio/Король и Шут - Ели Мясо Мужики.mp3"
-          ></audio>
-          <audio
-            src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/audio/Godsmack - Bulletproof.mp3"
-          ></audio>
-          <audio
-            src="/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/audio/Evans Blue - This Time It's Different.mp3"
-          ></audio>
-          <div class="current-time"></div>
-          <div class="progress__bar">
-            <div class="progress__bar--during"></div>
-            <div class="time-length"></div>
           </div>
         </div>
       </div>

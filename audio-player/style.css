@@ -1,28 +1,44 @@
-.wrapper{
+
+
+.wrapper-img{
+    position: absolute;
     max-width: 1024px;
+    width: 100%;
     height: 100vh;
-    margin: 0 auto;
-    background-color: aquamarine;
+    margin: auto;
+    background-image: url(/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/king_and_joker.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
 }
 .audio-player{
+    position: relative;
     width: 400px;
-
     margin:0 auto;
-    background-color:cadetblue;
     border-radius: 20px;
     overflow: hidden;
+    z-index: 5;
 }
 
 
 .audio-player__image{
     width: 400%;
     display: flex;
-    position: relative;
     transition: all 1s;
 }
 
 .image{
     width: 400px;
+    border-radius: 30px 30px 0px 0;
+}
+
+.audio-player__container{
+    margin-top: 450px;
+    box-shadow: 0 0 10px #000000;
+    padding-bottom:20px ;
+    border-radius: 30px;
 }
 
 .audio-player__control-container{
@@ -62,6 +78,11 @@
     flex-direction: column;
 }
 
+.audio-player__control-wrapper{
+    background:linear-gradient(45deg, rgb(40, 40, 40), rgb(133, 133, 133));
+    border-radius: 30px;
+}
+
 .control__song-description{
     margin-right: 20px;
 }
@@ -81,6 +102,7 @@
     height: 3px;
     background-color: black;
     margin: 10px 44px 20px 44px;
+    cursor: pointer;
 }
 .progress__bar--during{
     width: 10%;

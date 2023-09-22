@@ -1,3 +1,4 @@
+const wrapperImg = document.querySelector(".wrapper-img");
 const audio = document.querySelectorAll("audio");
 const btnPrev = document.querySelector(".prev");
 const btnNext = document.querySelector(".next");
@@ -14,7 +15,6 @@ let currentTreck = 0;
 let position = 0;
 const movePosition = 25;
 function playAudio() {
-  audio[currentTreck].currentTime = 0;
   audio[currentTreck].play();
 }
 function stopAudio() {
@@ -31,14 +31,17 @@ function checkCurent() {
 
 function checkPicture() {
   if (currentTreck == 0) {
+    wrapperImg.style.backgroundImage = `url(/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/king_and_joker.jpg)`;
     songAuthor.innerHTML = "King and Joker";
     songName.innerHTML = "Man was eating meat";
     karusel.style.transform = `translate(0%)`;
   } else if (currentTreck == 1) {
+    wrapperImg.style.backgroundImage = `url(/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/bulletProof.jpg)`;
     songAuthor.innerHTML = "GoodMask";
     songName.innerHTML = "BULLETPROOF";
     karusel.style.transform = `translate(-25%)`;
   } else if (currentTreck == 2) {
+    wrapperImg.style.backgroundImage = `url("/nesmeian-JSFEPRESCHOOL2023Q2/audio-player/img/Time_it's_differnt.jpg")`;
     songAuthor.innerHTML = "Evans Bluse";
     songName.innerHTML = "This Time it's Different";
     karusel.style.transform = `translate(-50%)`;
@@ -52,7 +55,7 @@ function toggleBtn() {
   } else {
     isPlay = false;
   }
-  if (isPlay == true) {
+  if (audio[currentTreck].paused) {
     playAudio();
   } else {
     stopAudio();
