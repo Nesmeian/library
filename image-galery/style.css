@@ -1,0 +1,89 @@
+body{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.header{
+    height: 10vh;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+.line{
+    width: 100%;
+    height: 5px;
+    background-color: yellow;
+}
+
+.logo__container{
+    display: flex;
+    align-items: center;
+}
+
+.search__img{
+    width: 16px;
+    height: 16px;
+}
+
+.logo__picture_img{
+    width: 36px;
+    height: 36px;
+}
+
+
+.search__input{
+    padding: 4px;
+    border-radius: 25px;
+    border: none;
+}
+
+.search__btn{
+    right: 10px;
+    top: 5px;
+    position: absolute;
+    width: auto;
+    height: 16px;
+    padding: 0;
+    border: none;
+    border-radius: 15px;
+}
+
+.rss-school__img{
+    width: 46px;
+    height: 46px;
+}
+
+.search{
+    position: relative;
+}
+
+
+
+main{
+    height: 80vh;
+}
+
+.footer{
+    height: 10vh;
+    background-color: gray;
+}
+
+
+.informatin__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-gitHub__link{
+    color: black;
+    text-decoration: none;
+}
+
+.my-gitHub__link:hover{
+    color: yellow;
+    text-decoration: underline;
+}
