@@ -1,3 +1,0 @@
-;/*FB_PKG_DELIM*/
-
-__d("FxGrowthIdentitySyncingFalcoEvent",["FalcoLoggerInternal","getFalcoLogPolicy_DO_NOT_USE"],(function(a,b,c,d,e,f,g){"use strict";a=c("getFalcoLogPolicy_DO_NOT_USE")("1790");b=d("FalcoLoggerInternal").create("fx_growth_identity_syncing",a);e=b;g["default"]=e}),98);
