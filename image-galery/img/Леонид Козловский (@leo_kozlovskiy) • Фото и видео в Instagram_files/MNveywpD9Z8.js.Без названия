@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("FxIdentityProductFalcoEvent",["FalcoLoggerInternal","getFalcoLogPolicy_DO_NOT_USE"],(function(a,b,c,d,e,f,g){"use strict";a=c("getFalcoLogPolicy_DO_NOT_USE")("1749696");b=d("FalcoLoggerInternal").create("fx_identity_product",a);e=b;g["default"]=e}),98);

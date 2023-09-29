@@ -1,9 +1,28 @@
-// const url =
-//   "https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query=spring";
+const searchBtn = document.querySelector(".search__img");
+const img = document.querySelectorAll(".imga");
+const clientId = "aBS5IwU-Tuy9ImvqqqmIyle_52j3qEbW_3gEgr5IRz4";
+const search = document.querySelector(".search__input");
+let value = "winter";
+function searchValue() {
+  value = search.value;
+  fetchHandler();
+}
+document.addEventListener("keyup", (event) => {
+  if (event.code === "Enter") {
+    searchValue();
+  }
+});
+searchBtn.addEventListener("click", searchValue);
 
-// async function getData() {
-//   const res = await fetch(url);
-//   const data = await res.json();
-//   console.log(data);
-// }
-// getData();
+async function fetchHandler() {
+  const url = `https://api.unsplash.com/search/photos?query=${value}&per_page=15&client_id=${clientId}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  img.forEach((e, i) => {
+    e.src = data.results[i]?.urls.regular;
+  });
+}
+fetchHandler();
+window.onload = function () {
+  search.focus();
+};
