@@ -1,6 +1,7 @@
 import { Cell } from "./cell.js";
+
 const GRID_SIZE = 4;
-const CELLS_COUNT = (GRID_SIZE = GRID_SIZE);
+const CELLS_COUNT = GRID_SIZE * GRID_SIZE;
 
 export class Grid {
   constructor(gridElement) {
@@ -10,5 +11,11 @@ export class Grid {
         new Cell(gridElement, i % GRID_SIZE, Math.floor(i / GRID_SIZE))
       );
     }
+  }
+
+  getRandomPlace() {
+    const emptyCells = this.cells.filter((item) => item.isEmpty());
+    const randomIndex = Math.floor(Math.random() * emptyCells.length);
+    return emptyCells[randomIndex];
   }
 }
