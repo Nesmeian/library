@@ -4,7 +4,11 @@ import { Grid } from "./grid.js";
 import { WorkItem } from "./workItem.js";
 const game = document.querySelector(".board");
 const grid = new Grid(game);
-let visiblResult = document.querySelector(".result");
+const resulTable = JSON.parse(window.localStorage.getItem("results"));
+if (!localStorage.hasOwnProperty("results")) {
+  localStorage.setItem("results", JSON.stringify([]));
+}
+
 grid.getRandomPlace().linkTile(new WorkItem(game));
 grid.getRandomPlace().linkTile(new WorkItem(game));
 
@@ -13,6 +17,7 @@ setupInputOnce();
 function setupInputOnce() {
   window.addEventListener("keydown", handleInput, { once: true });
 }
+
 async function handleInput(event) {
   switch (event.key) {
     case "ArrowUp":
@@ -21,6 +26,7 @@ async function handleInput(event) {
         return;
       }
       playAudio();
+      console.log(resulTable[5]);
       await moveUp();
       break;
     case "ArrowDown":
@@ -53,7 +59,14 @@ async function handleInput(event) {
   }
   const newTile = new WorkItem(game);
   grid.getRandomPlace().linkTile(newTile);
-
+  if (!canMoveUp() && !canMoveDown() && !canMoveLeft() && !canMoveRight()) {
+    await newTile.waitForAnimationEnd();
+    resulTable.push(result);
+    sorting(resulTable);
+    localStorage.setItem("results", JSON.stringify(resulTable));
+    alert("Try again");
+    location.reload();
+  }
   setupInputOnce();
 }
 
@@ -148,7 +161,24 @@ function canMoveInGroup(group) {
   });
 }
 
+let visiblResult = document.querySelector(".result__count");
+const resultTableDiv = document.querySelector(".results__table");
+function sorting(arr) {
+  return arr.sort((a, b) => b - a);
+}
+
 function showResult() {
   visiblResult.textContent = result;
 }
-setInterval(() => showResult(), 200);
+
+function showResultTable() {
+  resulTable.forEach((e) => {
+    let value = e;
+    e = document.createElement("div");
+    e.classList.add("table__item");
+    e.textContent = value;
+    resultTableDiv.append(e);
+  });
+}
+
+setInterval(() => showResult(), showResultTable(), 200);
