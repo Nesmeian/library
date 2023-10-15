@@ -1,5 +1,8 @@
+export { result };
+let result = 0;
 export class Cell {
   constructor(gridElement, x, y) {
+    this.count = [];
     const item = document.createElement("div");
     item.classList.add("item");
     gridElement.append(item);
@@ -37,10 +40,18 @@ export class Cell {
   }
 
   mergeTiles() {
+    this.count.push(this.linkedTile.value + this.linkedTileForMerge.value);
+    this.counting();
+    this.count.pop();
     this.linkedTile.setValue(
       this.linkedTile.value + this.linkedTileForMerge.value
     );
     this.linkedTileForMerge.removeFromDOM();
     this.unlinkTileForMerge();
+  }
+  counting() {
+    this.count.forEach((e) => {
+      result = result + e;
+    }, 0);
   }
 }

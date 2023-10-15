@@ -1,7 +1,9 @@
 .wrapper {
+  position: relative;
   background-color: gray;
   display: flex;
   justify-content: center;
+  max-width: 1300px;
   height: 100vh;
   align-items: center;
 }
@@ -40,6 +42,22 @@
   color: hsl(20, 25%, var(--text-lightness));
   transition: 100ms;
   animation: show 200ms;
+}
+
+.result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 30vmin;
+  height: 7.5vmin;
+  background-color: darkgray;
+  border-radius: 10px;
+  font-size: 5vmin;
+  margin: 10vmin;
 }
 
 @keyframes show {

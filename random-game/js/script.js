@@ -1,9 +1,10 @@
 import { playAudio } from "./audio.js";
+import { result } from "./cell.js";
 import { Grid } from "./grid.js";
 import { WorkItem } from "./workItem.js";
-
 const game = document.querySelector(".board");
 const grid = new Grid(game);
+let visiblResult = document.querySelector(".result");
 grid.getRandomPlace().linkTile(new WorkItem(game));
 grid.getRandomPlace().linkTile(new WorkItem(game));
 
@@ -146,3 +147,8 @@ function canMoveInGroup(group) {
     return targetCell.canAccept(cell.linkedTile);
   });
 }
+
+function showResult() {
+  visiblResult.textContent = result;
+}
+setInterval(() => showResult(), 200);
