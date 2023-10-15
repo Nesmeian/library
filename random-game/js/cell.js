@@ -6,11 +6,41 @@ export class Cell {
     this.x = x;
     this.y = y;
   }
-  linkWorkItem(workItem) {
-    workItem.setXY(this.x, this.y);
-    this.linkWorkItem = workItem;
+  linkTile(tile) {
+    tile.setXY(this.x, this.y);
+    this.linkedTile = tile;
   }
   isEmpty() {
-    return !this.linkedWorkItem;
+    return !this.linkedTile;
+  }
+
+  unlinkTile() {
+    this.linkedTile = null;
+  }
+  linkTileForMerge(tile) {
+    tile.setXY(this.x, this.y);
+    this.linkedTileForMerge = tile;
+  }
+  canAccept(newTile) {
+    return (
+      this.isEmpty() ||
+      (!this.hasTileForMerge() && this.linkedTile.value === newTile.value)
+    );
+  }
+
+  unlinkTileForMerge() {
+    this.linkedTileForMerge = null;
+  }
+
+  hasTileForMerge() {
+    return !!this.linkedTileForMerge;
+  }
+
+  mergeTiles() {
+    this.linkedTile.setValue(
+      this.linkedTile.value + this.linkedTileForMerge.value
+    );
+    this.linkedTileForMerge.removeFromDOM();
+    this.unlinkTileForMerge();
   }
 }

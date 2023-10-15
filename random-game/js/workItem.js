@@ -1,32 +1,30 @@
 export class WorkItem {
   constructor(gridElement) {
-    this.workElement = document.createElement("div");
-    this.workElement.classList.add("work-item");
-    this.setValue(randValue());
-    gridElement.append(this.workElement);
+    this.tileElement = document.createElement("div");
+    this.tileElement.classList.add("work-item");
+    this.setValue(Math.random() > 0.5 ? 2 : 4);
+    gridElement.append(this.tileElement);
   }
-  setXY(x, y) {
-    this.x = x;
-    this.y = y;
-    this.workElement.style.setProperty("--x", x);
-    this.workElement.style.setProperty("--y", y);
-  }
+
   setValue(value) {
     this.value = value;
-    this.workElement.textContent = this.value;
+    this.tileElement.textContent = value;
     const bgLightness = 100 - Math.log2(value) * 9;
-    this.workElement.style.setProperty("--bg-lightness", `${bgLightness}%`);
-    this.workElement.style.setProperty(
+    this.tileElement.style.setProperty("--bg-lightness", `${bgLightness}%`);
+    this.tileElement.style.setProperty(
       "--text-lightness",
       `${bgLightness < 50 ? 90 : 10}%`
     );
   }
-}
 
-function randValue() {
-  if (Math.random() > 0.5) {
-    return 4;
-  } else {
-    return 2;
+  setXY(x, y) {
+    this.x = x;
+    this.y = y;
+    this.tileElement.style.setProperty("--x", x);
+    this.tileElement.style.setProperty("--y", y);
+  }
+
+  removeFromDOM() {
+    this.tileElement.remove();
   }
 }

@@ -11,11 +11,36 @@ export class Grid {
         new Cell(gridElement, i % GRID_SIZE, Math.floor(i / GRID_SIZE))
       );
     }
+    this.cellsGroupedByColumn = this.groupCellsByColumn();
+
+    this.cellsGroupedByReversedColumn = this.cellsGroupedByColumn.map(
+      (column) => [...column].reverse()
+    );
+    this.cellsGroupedByRow = this.groupCellByRow();
+    this.cellsGroupedByReversedRow = this.cellsGroupedByRow.map((row) =>
+      [...row].reverse()
+    );
   }
 
   getRandomPlace() {
     const emptyCells = this.cells.filter((item) => item.isEmpty());
     const randomIndex = Math.floor(Math.random() * emptyCells.length);
     return emptyCells[randomIndex];
+  }
+
+  groupCellsByColumn() {
+    return this.cells.reduce((groupedCells, cell) => {
+      groupedCells[cell.x] = groupedCells[cell.x] || [];
+      groupedCells[cell.x][cell.y] = cell;
+      return groupedCells;
+    }, []);
+  }
+
+  groupCellByRow() {
+    return this.cells.reduce((groupedCells, cell) => {
+      groupedCells[cell.y] = groupedCells[cell.y] || [];
+      groupedCells[cell.y][cell.x] = cell;
+      return groupedCells;
+    }, []);
   }
 }
