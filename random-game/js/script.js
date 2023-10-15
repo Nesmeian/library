@@ -1,3 +1,12 @@
+console.log(`
+  1.Реализован интерфейс игры +5\n
+  2.В футере приложения есть ссылка на гитхаб автора приложения, год создания приложения, логотип курса со ссылкой на курс +5\n
+  3.Логика игры. Ходы, перемещения фигур, другие действия игрока подчиняются определённым свойственным игре правилам +10\n
+  4.Реализовано завершение игры при достижении игровой цели +10\n
+  5.По окончанию игры выводится её результат -набранные баллы +10\n
+  6.Есть таблица результатов, в которой сохраняются результаты 10 игр с наибольшим счетом +10\n
+  7.Анимации или звуки, или настройки игры. Баллы начисляются за любой из перечисленных пунктов +10`);
+
 import { playAudio } from "./audio.js";
 import { result } from "./cell.js";
 import { Grid } from "./grid.js";
@@ -64,8 +73,7 @@ async function handleInput(event) {
     resulTable.push(result);
     sorting(resulTable);
     localStorage.setItem("results", JSON.stringify(resulTable));
-    alert("Try again");
-    location.reload();
+    finish();
   }
   setupInputOnce();
 }
@@ -162,10 +170,20 @@ function canMoveInGroup(group) {
 }
 
 let visiblResult = document.querySelector(".result__count");
+const count = document.querySelector(".count");
+const popUp = document.querySelector(".pop-up");
 const resultTableDiv = document.querySelector(".results__table");
+const btn = document.querySelector("button");
+
 function sorting(arr) {
   return arr.sort((a, b) => b - a);
 }
+
+function reloadGame() {
+  location.reload();
+}
+
+btn.addEventListener("click", reloadGame);
 
 function showResult() {
   visiblResult.textContent = result;
@@ -179,6 +197,11 @@ function showResultTable() {
     e.textContent = value;
     resultTableDiv.append(e);
   });
+}
+
+function finish() {
+  popUp.classList.add("--finish");
+  count.textContent = result;
 }
 
 setInterval(() => showResult(), showResultTable(), 200);
