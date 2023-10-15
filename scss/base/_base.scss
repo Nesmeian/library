@@ -1,0 +1,321 @@
+//Here lie scroll,fonts,list,loyalt
+
+html {
+  scroll-behavior: smooth;
+}
+
+//fonts
+body {
+  font-family: "Inter", Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: $color-border;
+}
+
+h1 {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  color: $color-background;
+  margin: 0;
+}
+.pop-up {
+  font-family: "Inter", Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+.pop-up__text {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+}
+
+.title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.pop-up__title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.my_profile__title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.rented__books_item {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.my-profile__personal-data {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.my-profile_logo__img {
+  color: $color-button-active;
+  text-align: center;
+  line-height: 3.9;
+}
+
+.personal-data__item-count {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.rented__books_title {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.rented__books_list {
+  padding-left: 20px;
+}
+
+.my-profile__card-link {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.buy-card__title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: $color-background;
+}
+
+.buy-card__form {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+
+.buy_book__cost {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.buy-card__text {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.welcome-text {
+  color: $color-background;
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.about__text {
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0em;
+}
+
+.favorites__text {
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.seasons__label--cheked {
+  font-weight: 700;
+  line-height: 24px;
+}
+.favorites__staff_picks {
+  font-family: "Forum", Verdana, sans-serif;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.favorites__item_title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 40px;
+  h3 {
+    text-transform: uppercase;
+  }
+  h4 {
+    letter-spacing: 2px;
+  }
+}
+
+.favorites__item_text {
+  text-transform: capitalize;
+  font-size: 15px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+.coffee__container_title {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: $color-button-active;
+}
+
+.coffee__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.coffee__container {
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.coffee__container_price {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.contacts__container-phone_info .library__item_title-1 {
+  font-size: 30px;
+}
+.library__item_title_2 {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 30px;
+}
+
+.contacts {
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+  }
+  p {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}
+.contacts__mail_link {
+  font-weight: 700;
+}
+
+.library__item_title_1 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+}
+
+.library__item_title_2 {
+  font-family: "Forum", Verdana, sans-serif;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0.02em;
+}
+
+.library__form_text {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.library__item_text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.library__form_input {
+  font-family: "Forum", Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+}
+
+.button {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.library__form_button {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.footer {
+  color: $color-background;
+}
+
+.footer__item_text {
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+.footer__item_location {
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.footer__container {
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+// list
+.list {
+  list-style-type: none;
+}

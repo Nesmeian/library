@@ -1,0 +1,24 @@
+.contacts__tel_link.link,
+.contacts__mail_link.link {
+  color: $color-border;
+}
+.link {
+  text-decoration: none;
+  color: $color-background;
+  transition: all 0.5s;
+  &:hover {
+    text-decoration: underline;
+    color: $color-button-active;
+  }
+}
+
+.my-profile__card-link {
+  color: $color-button-active;
+  cursor: pointer;
+}
+
+.pop-up-log__link,
+.pop-up-reg__link {
+  color: $color-border;
+  text-decoration: underline;
+}

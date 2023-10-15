@@ -1,0 +1,111 @@
+.favorites {
+  min-height: 1440px;
+}
+
+.favorites__loyalt4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 57px;
+}
+
+.favorites__book_section {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: all 1s;
+}
+
+.favorites__text {
+  p {
+    margin: 40px 0 0 20px;
+  }
+}
+
+.favorites__seasons_form {
+  margin-top: 38px;
+  padding-left: 20px;
+}
+
+.seasons__label {
+  margin-right: 72px;
+}
+
+.seasons__label::before {
+  margin-right: 21px;
+}
+
+.favorites__item {
+  position: relative;
+  height: 552px;
+  width: 529px;
+  margin: 34px 0px 6px 21px;
+  padding-left: 17px;
+  border: 1px solid #0c0c0e;
+  &:nth-child(1n) {
+    margin-right: 60px;
+  }
+}
+
+.favorites__staff_picks {
+  margin: 13px 0 0 0;
+}
+
+.favorites__staff_picks::after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: $color-button-active;
+}
+
+.favorites__item_title {
+  h3 {
+    margin: 20px 0 0 0;
+  }
+  h4 {
+    margin: 0 0 19px 0;
+  }
+}
+
+.favorites__item_text {
+  p {
+    padding-right: 173px;
+  }
+}
+
+.favorites__item_img {
+  position: absolute;
+  right: -40px;
+  bottom: -5px;
+}
+
+.favorites__item_button {
+  position: absolute;
+  bottom: 11px;
+}
+
+@media (max-width: $tablet-width) {
+  .favorites__loyalt4 {
+    justify-content: center;
+  }
+}
+
+.favorites__radio-conteiner {
+  width: 100%;
+  background-color: #fff;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+
+.inactive {
+  visibility: hidden;
+  transition: all 0.5s;
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

@@ -1,0 +1,170 @@
+.pagination__container {
+  padding: 0 5px 0 5px;
+  cursor: pointer;
+}
+
+.arroy {
+  display: none;
+}
+
+.pagination__button {
+  width: 16px;
+  height: 16px;
+  margin: 40px 0 40px 0;
+  background-color: $color-primary;
+  border-radius: 50px;
+}
+
+.pagination__container5,
+.pagination__container4 {
+  display: none;
+}
+.pagination__button--active {
+  background-color: $color-button-active;
+  cursor: auto;
+}
+
+.seasons__radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.seasons__radio + label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.seasons__label {
+  padding: 5px;
+}
+
+.seasons__radio + label::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-primary;
+
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.seasons__radio:checked + label::before {
+  border-color: $color-background;
+  border-color: $color-primary;
+  background-image: url(/nesmeian-JSFEPRESCHOOL2023Q2/img/svg/radio-checked.svg);
+}
+
+.button {
+  background-color: $color-background;
+  padding: 8px 26px;
+  border-radius: 2px;
+  border: 1px solid $color-primary;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:not([disabled]):hover {
+    border: none;
+    background-color: $color-button-active;
+  }
+}
+.pop-up__input {
+  border: 1px solid #bb945f;
+  width: 200px;
+  padding: 0;
+  margin: 10px 30px 10px 0px;
+}
+
+.pop-up__button {
+  margin: 10px 0 0 0;
+  padding: 9px 16px;
+  background-color: #ffffff;
+  color: #0c0c0e;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+button:disabled,
+button[disabled] {
+  color: $color-button-active;
+  border-color: $color-button-active;
+  cursor: auto;
+}
+.library__item_button-left {
+  padding: 7px 19px;
+}
+.library__item_button-left {
+  margin-right: 15px;
+  padding: 7px 14px;
+}
+
+.library__item_button-right {
+  padding: 7px 18px;
+}
+
+.library__form_input {
+  margin: 0 20px 24px 20px;
+  width: 500px;
+  padding: 10px 0px 7px 18px;
+  border: 0;
+  border-radius: 10px;
+  color: $color-button-active;
+}
+
+.library__form_button {
+  width: 242px;
+  margin: 20px 0px 8px 159px;
+  padding: 16px 38px 15px 39px;
+}
+
+.library__button-wrapper {
+  background-color: $color-background;
+}
+
+.header__burger_meny {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .arroy {
+    display: block;
+  }
+  .pagination__button {
+    margin-top: 20px;
+  }
+  .pagination__container5,
+  .pagination__container4 {
+    display: block;
+  }
+
+  .header__burger_meny {
+    display: block;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  .header__burger_line {
+    width: 45px;
+    height: 2px;
+    margin-bottom: 7px;
+    background-color: $color-background;
+    transition: all 0.3s ease;
+  }
+
+  .header__burger_meny.active {
+    position: fixed;
+    z-index: 11;
+    .header__burger_line:nth-child(2) {
+      opacity: 0;
+    }
+    .header__burger_line:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+    .header__burger_line:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}

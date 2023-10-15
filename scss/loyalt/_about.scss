@@ -1,0 +1,59 @@
+.about__text {
+  text-align: center;
+  p {
+    margin: 41px 0 20px 0;
+    padding: 0 20px;
+  }
+}
+
+.about__loyalt3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about_loyalt__container {
+  max-width: 1440px;
+  overflow: hidden;
+}
+
+.about__img {
+  padding: 0 4px 0 20px;
+  transition: all 1s;
+}
+
+.about__pagination {
+  display: flex;
+  justify-content: center;
+}
+
+pagination__container4,
+.pagination__container5 {
+  display: none;
+}
+@media (max-width: $tablet-width) {
+  pagination__container4,
+  .pagination__container5 {
+    display: block;
+  }
+
+  .about_loyalt__container {
+    max-width: 560px;
+    overflow: hidden;
+  }
+  .about__text {
+    p {
+      margin: 41px 0 20px 0;
+      padding: 0 20px;
+    }
+  }
+  .about__loyalt3_img {
+    justify-content: center;
+    align-items: center;
+  }
+  .arroy {
+    margin-top: 44px;
+  }
+  .about__img {
+    padding: 0 58px;
+  }
+}

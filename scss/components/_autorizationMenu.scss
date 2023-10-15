@@ -1,0 +1,76 @@
+.no-authorization__menu {
+  position: absolute;
+  top: 80px;
+  width: 80px;
+  transform: scaleX(0);
+  font-size: 15px;
+  text-align: center;
+  background-color: $color-background;
+  transition: all 0.5s;
+  right: 20px;
+  top: 71px;
+}
+
+.with-authorization__menu {
+  position: absolute;
+  top: 80px;
+  width: 80px;
+  transform: scaleX(0);
+  font-size: 15px;
+  text-align: center;
+  background-color: $color-background;
+  transition: all 0.5s;
+  right: 20px;
+  top: 71px;
+}
+.profile {
+  font-weight: 700;
+  padding: 5px;
+}
+
+.log-in {
+  height: 40px;
+  width: 80px;
+  vertical-align: initial;
+  text-align: center;
+  line-height: 3.5;
+  cursor: pointer;
+}
+.register {
+  height: 46px;
+  width: 80px;
+  vertical-align: initial;
+  text-align: center;
+  line-height: 2.2;
+  cursor: pointer;
+}
+
+.card-number {
+  font-weight: 700;
+  padding: 5px;
+  font-size: 12px;
+}
+.my-profile {
+  height: 40px;
+  width: 80px;
+  vertical-align: initial;
+  text-align: center;
+  line-height: 3.5;
+  cursor: pointer;
+}
+
+.log-out {
+  height: 46px;
+  width: 80px;
+  vertical-align: initial;
+  text-align: center;
+  line-height: 2.2;
+  cursor: pointer;
+}
+
+.authorization__menu--active {
+  transform: scaleX(1);
+  @media (max-width: $tablet-width) {
+    transform: scaleX(1);
+  }
+}
