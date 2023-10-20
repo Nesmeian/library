@@ -1,5 +1,7 @@
 export { result };
+export { gameOver };
 let result = 0;
+let gameOver = 0;
 export class Cell {
   constructor(gridElement, x, y) {
     this.count = [];
@@ -41,6 +43,7 @@ export class Cell {
 
   mergeTiles() {
     this.count.push(this.linkedTile.value + this.linkedTileForMerge.value);
+    gameOver = this.linkedTile.value + this.linkedTileForMerge.value;
     this.counting();
     this.count.pop();
     this.linkedTile.setValue(

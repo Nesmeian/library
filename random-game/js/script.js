@@ -7,10 +7,10 @@ console.log(`
   6.Есть таблица результатов, в которой сохраняются результаты 10 игр с наибольшим счетом +10\n
   7.Анимации или звуки, или настройки игры. Баллы начисляются за любой из перечисленных пунктов +10\n
   \n
-  Управление в игре релизовнно клавишами ← ↑ → 	↓	.Приятной игры)`);
+  Управление в игре реализованно клавишами ← ↑ → 	↓	.Приятной игры)`);
 
 import { playAudio } from "./audio.js";
-import { result } from "./cell.js";
+import { result, gameOver } from "./cell.js";
 import { Grid } from "./grid.js";
 import { WorkItem } from "./workItem.js";
 const game = document.querySelector(".board");
@@ -45,6 +45,7 @@ async function handleInput(event) {
         setupInputOnce();
         return;
       }
+
       playAudio();
       await moveDown();
       break;
@@ -206,4 +207,11 @@ function finish() {
   count.textContent = result;
 }
 
+function EndGame() {
+  if (gameOver === 64) {
+    finish();
+  }
+}
+
 setInterval(() => showResult(), showResultTable(), 200);
+setInterval(() => EndGame(), 0);
