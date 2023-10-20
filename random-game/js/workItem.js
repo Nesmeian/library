@@ -2,7 +2,7 @@ export class WorkItem {
   constructor(gridElement) {
     this.tileElement = document.createElement("div");
     this.tileElement.classList.add("work-item");
-    this.setValue(Math.random() > 0.5 ? 2 : 4);
+    this.setValue(randomItem());
     gridElement.append(this.tileElement);
   }
 
@@ -42,5 +42,12 @@ export class WorkItem {
         once: true,
       });
     });
+  }
+}
+function randomItem() {
+  if (Math.random() >= 0.5) {
+    return 2;
+  } else {
+    return 4;
   }
 }

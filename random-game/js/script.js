@@ -7,10 +7,10 @@ console.log(`
   6.Есть таблица результатов, в которой сохраняются результаты 10 игр с наибольшим счетом +10\n
   7.Анимации или звуки, или настройки игры. Баллы начисляются за любой из перечисленных пунктов +10\n
   \n
-  Управление в игре релизовнно клавишами ← ↑ → 	↓	.Приятной игры)`);
+  Управление в игре реализованно клавишами ← ↑ → 	↓	.Приятной игры)`);
 
 import { playAudio } from "./audio.js";
-import { result } from "./cell.js";
+import { result, gameOver } from "./cell.js";
 import { Grid } from "./grid.js";
 import { WorkItem } from "./workItem.js";
 const game = document.querySelector(".board");
@@ -37,7 +37,6 @@ async function handleInput(event) {
         return;
       }
       playAudio();
-      console.log(resulTable[5]);
       await moveUp();
       break;
     case "ArrowDown":
@@ -45,6 +44,7 @@ async function handleInput(event) {
         setupInputOnce();
         return;
       }
+
       playAudio();
       await moveDown();
       break;
@@ -173,9 +173,12 @@ function canMoveInGroup(group) {
 
 let visiblResult = document.querySelector(".result__count");
 const count = document.querySelector(".count");
-const popUp = document.querySelector(".pop-up");
+const popUpGameOver = document.querySelector(".pop-up__game-over");
+const popUpGameWin = document.querySelector(".pop-up__game-win");
 const resultTableDiv = document.querySelector(".results__table");
-const btn = document.querySelector("button");
+const btnOverStartAgain = document.querySelector(".game-over__start-again");
+const btnWinStartAgain = document.querySelector(".game-win__start-again");
+const btnResumeGame = document.querySelector(".resume__game");
 
 function sorting(arr) {
   return arr.sort((a, b) => b - a);
@@ -184,8 +187,6 @@ function sorting(arr) {
 function reloadGame() {
   location.reload();
 }
-
-btn.addEventListener("click", reloadGame);
 
 function showResult() {
   visiblResult.textContent = result;
@@ -198,12 +199,41 @@ function showResultTable() {
     e.classList.add("table__item");
     e.textContent = value;
     resultTableDiv.append(e);
+    checkResultsLength();
   });
 }
 
 function finish() {
-  popUp.classList.add("--finish");
+  popUpGameOver.classList.add("--finish");
   count.textContent = result;
+  btnOverStartAgain.disabled = false;
+  btnOverStartAgain.addEventListener("click", reloadGame);
+}
+
+function removePopUpWin() {
+  popUpGameWin.classList.remove("--finish");
+  clearInterval(gameStop);
+}
+
+function addPopUpWin() {
+  popUpGameWin.classList.add("--finish");
+}
+
+function winGame() {
+  if (gameOver >= 2048) {
+    addPopUpWin();
+    btnWinStartAgain.disabled = false;
+    btnResumeGame.disabled = false;
+    btnWinStartAgain.addEventListener("click", reloadGame);
+    btnResumeGame.addEventListener("click", removePopUpWin);
+  }
+}
+function checkResultsLength() {
+  if (resulTable.length === 11) {
+    resulTable.pop();
+    localStorage.setItem("results", JSON.stringify(resulTable));
+  }
 }
 
 setInterval(() => showResult(), showResultTable(), 200);
+const gameStop = setInterval(() => winGame(), 200);

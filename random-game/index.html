@@ -4,14 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="/nesmeian-JSFEPRESCHOOL2023Q2/random-game/img/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <title>2048</title>
   </head>
   <body>
-    <div class="pop-up">
+    <div class="pop-up__game-over">
       <div class="pop-up__text">The Game Is Over</div>
       <div class="pop-up__text">Your Count</div>
       <div class="count"></div>
-      <button>Try Again?</button>
+      <button class="game-over__start-again" disabled>Try Again?</button>
+    </div>
+    <div class="pop-up__game-win">
+      <div class="pop-up__text">Congratulation you win the game</div>
+      <div class="button__container">
+        <button class="game-win__start-again" disabled>Try Again?</button>
+        <button class="resume__game" disabled>Resume</button>
+      </div>
     </div>
     <div class="wrapper">
       <div class="results-container">
@@ -31,7 +43,7 @@
         <div class="rs-school">
           <a href="https://rs.school/js-stage0/"
             ><img
-              src="/random-game/img/rs_school_js.svg"
+              src="/nesmeian-JSFEPRESCHOOL2023Q2/random-game/img/rs_school_js.svg"
               width="64"
               height="64"
               alt="rs-school"
