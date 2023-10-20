@@ -37,7 +37,6 @@ async function handleInput(event) {
         return;
       }
       playAudio();
-      console.log(resulTable[5]);
       await moveUp();
       break;
     case "ArrowDown":
@@ -174,9 +173,12 @@ function canMoveInGroup(group) {
 
 let visiblResult = document.querySelector(".result__count");
 const count = document.querySelector(".count");
-const popUp = document.querySelector(".pop-up");
+const popUpGameOver = document.querySelector(".pop-up__game-over");
+const popUpGameWin = document.querySelector(".pop-up__game-win");
 const resultTableDiv = document.querySelector(".results__table");
-const btn = document.querySelector("button");
+const btnOverStartAgain = document.querySelector(".game-over__start-again");
+const btnWinStartAgain = document.querySelector(".game-win__start-again");
+const btnResumeGame = document.querySelector(".resume__game");
 
 function sorting(arr) {
   return arr.sort((a, b) => b - a);
@@ -185,8 +187,6 @@ function sorting(arr) {
 function reloadGame() {
   location.reload();
 }
-
-btn.addEventListener("click", reloadGame);
 
 function showResult() {
   visiblResult.textContent = result;
@@ -199,19 +199,41 @@ function showResultTable() {
     e.classList.add("table__item");
     e.textContent = value;
     resultTableDiv.append(e);
+    checkResultsLength();
   });
 }
 
 function finish() {
-  popUp.classList.add("--finish");
+  popUpGameOver.classList.add("--finish");
   count.textContent = result;
+  btnOverStartAgain.disabled = false;
+  btnOverStartAgain.addEventListener("click", reloadGame);
 }
 
-function EndGame() {
-  if (gameOver === 64) {
-    finish();
+function removePopUpWin() {
+  popUpGameWin.classList.remove("--finish");
+  clearInterval(gameStop);
+}
+
+function addPopUpWin() {
+  popUpGameWin.classList.add("--finish");
+}
+
+function winGame() {
+  if (gameOver >= 64) {
+    addPopUpWin();
+    btnWinStartAgain.disabled = false;
+    btnResumeGame.disabled = false;
+    btnWinStartAgain.addEventListener("click", reloadGame);
+    btnResumeGame.addEventListener("click", removePopUpWin);
+  }
+}
+function checkResultsLength() {
+  if (resulTable.length === 11) {
+    resulTable.pop();
+    localStorage.setItem("results", JSON.stringify(resulTable));
   }
 }
 
 setInterval(() => showResult(), showResultTable(), 200);
-setInterval(() => EndGame(), 0);
+const gameStop = setInterval(() => winGame(), 200);
