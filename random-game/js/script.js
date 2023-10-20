@@ -220,7 +220,7 @@ function addPopUpWin() {
 }
 
 function winGame() {
-  if (gameOver >= 64) {
+  if (gameOver >= 2048) {
     addPopUpWin();
     btnWinStartAgain.disabled = false;
     btnResumeGame.disabled = false;
